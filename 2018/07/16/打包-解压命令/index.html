@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="###1、zip压缩文件zip命令的参数很多,可以利用”zip –help”查看，在这里就不在一一说明了，下面只说几个常用的   1zip -q -r -e -m -o &amp;apos;yourName.zip&amp;apos;  &amp;quot;zipfile list&amp;apos;&amp;apos; -q ：不显示压缩进度状态-r ：子目录子文件全部压缩为zip  //不然的话只有”zipfile list’’文件">
+<meta name="description" content="1、zip压缩文件zip命令的参数很多,可以利用”zip –help”查看，在这里就不在一一说明了，下面只说几个常用的   1zip -q -r -e -m -o &amp;apos;yourName.zip&amp;apos;  &amp;quot;zipfile list&amp;apos;&amp;apos; -q ：不显示压缩进度状态-r ：子目录子文件全部压缩为zip  //不然的话只有”zipfile list’’文件夹被压">
 <meta name="keywords" content="终端命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="打包&#x2F;解压命令">
 <meta property="og:url" content="http://yoursite.com/2018/07/16/打包-解压命令/index.html">
 <meta property="og:site_name" content="Jayding&#39;s Home">
-<meta property="og:description" content="###1、zip压缩文件zip命令的参数很多,可以利用”zip –help”查看，在这里就不在一一说明了，下面只说几个常用的   1zip -q -r -e -m -o &amp;apos;yourName.zip&amp;apos;  &amp;quot;zipfile list&amp;apos;&amp;apos; -q ：不显示压缩进度状态-r ：子目录子文件全部压缩为zip  //不然的话只有”zipfile list’’文件">
+<meta property="og:description" content="1、zip压缩文件zip命令的参数很多,可以利用”zip –help”查看，在这里就不在一一说明了，下面只说几个常用的   1zip -q -r -e -m -o &amp;apos;yourName.zip&amp;apos;  &amp;quot;zipfile list&amp;apos;&amp;apos; -q ：不显示压缩进度状态-r ：子目录子文件全部压缩为zip  //不然的话只有”zipfile list’’文件夹被压">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-16T12:51:07.000Z">
+<meta property="og:updated_time" content="2018-07-16T13:32:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="打包&#x2F;解压命令">
-<meta name="twitter:description" content="###1、zip压缩文件zip命令的参数很多,可以利用”zip –help”查看，在这里就不在一一说明了，下面只说几个常用的   1zip -q -r -e -m -o &amp;apos;yourName.zip&amp;apos;  &amp;quot;zipfile list&amp;apos;&amp;apos; -q ：不显示压缩进度状态-r ：子目录子文件全部压缩为zip  //不然的话只有”zipfile list’’文件">
+<meta name="twitter:description" content="1、zip压缩文件zip命令的参数很多,可以利用”zip –help”查看，在这里就不在一一说明了，下面只说几个常用的   1zip -q -r -e -m -o &amp;apos;yourName.zip&amp;apos;  &amp;quot;zipfile list&amp;apos;&amp;apos; -q ：不显示压缩进度状态-r ：子目录子文件全部压缩为zip  //不然的话只有”zipfile list’’文件夹被压">
 
 
 
@@ -310,13 +310,12 @@
       
 
       
-        <p>###1、zip压缩文件<br>zip命令的参数很多,可以利用”zip –help”查看，在这里就不在一一说明了，下面只说几个常用的  </p>
+        <h3 id="1、zip压缩文件"><a href="#1、zip压缩文件" class="headerlink" title="1、zip压缩文件"></a>1、zip压缩文件</h3><p>zip命令的参数很多,可以利用”zip –help”查看，在这里就不在一一说明了，下面只说几个常用的  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -q -r -e -m -o &apos;yourName.zip&apos;  &quot;zipfile list&apos;&apos;</span><br></pre></td></tr></table></figure>
 <p>-q ：不显示压缩进度状态<br>-r ：子目录子文件全部压缩为zip  //不然的话只有”zipfile list’’文件夹被压缩，里面内容没有被压缩进去<br>-e ：压缩文件需要加密，终端会提示你输入密码的 //zip -r -P test password.zip “zipfile   list’’ 直接用’test’来加密password.zip 。<br>-m ：压缩完删除原文件<br>-o ：设置所有被压缩文件的最后修改时间为当前压缩时间</p>
 <p>跨目录的时候是这么操作的  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -q -r -e -m -o &apos;\user\someone\someDir\someFile.zip&apos; &apos;\users\someDir&apos;</span><br></pre></td></tr></table></figure>
-<p>###2、unzip解压文件  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip [options] 压缩文件名.zip，</span><br></pre></td></tr></table></figure>
+<h3 id="2、unzip解压文件"><a href="#2、unzip解压文件" class="headerlink" title="2、unzip解压文件"></a>2、unzip解压文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip [options] 压缩文件名.zip，</span><br></pre></td></tr></table></figure>
 <p>具体跟多的参数可以直接执行”unzip”查看,常用options的含义分别为：<br>-x ：文件列表解解压缩文件，但不包括指定的file文件。<br>-v ：查看压缩文件目录，但不解压。<br>-t ：测试文件有无损坏，但不解压。<br>-d ：目录 把压缩文件解到指定目录下。<br>-z ：只显示压缩文件的注解。<br>-n ：不覆盖已经存在的文件。<br>-o ：覆盖已存在的文件且不要求用户确认。<br>-j ：不重建文档的目录结构，把所有文件解压到同一目录下。   </p>
 
       
@@ -408,8 +407,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -460,6 +468,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、zip压缩文件"><span class="nav-number">1.</span> <span class="nav-text">1、zip压缩文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、unzip解压文件"><span class="nav-number">2.</span> <span class="nav-text">2、unzip解压文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
