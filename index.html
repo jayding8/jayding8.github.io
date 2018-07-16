@@ -190,6 +190,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -232,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/Shell/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/Scp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jayding">
@@ -251,7 +261,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/16/Shell/" itemprop="url">Shell</a></h1>
+                <a class="post-title-link" href="/2018/07/16/Scp/" itemprop="url">Scp</a></h1>
         
 
         <div class="post-meta">
@@ -303,7 +313,12 @@
       
         
           
-            
+            <p>利用scp传输文件</p>
+<p>   1、从服务器下载文件<br>   scp username@servername:/path/filename /tmp/local_destination<br>   例如scp <a href="mailto:codinglog@192.168.0.101" target="_blank" rel="noopener">codinglog@192.168.0.101</a>:/home/kimi/test.txt  把192.168.0.101上的/home/kimi/test.txt<br>   的文件下载到 /tmp/local_destination<br>   2、上传本地文件到服务器<br>   scp /path/local_filename username@servername:/path<br>   例如scp /var/www/test.php  <a href="mailto:codinglog@192.168.0.101" target="_blank" rel="noopener">codinglog@192.168.0.101</a>:/var/www/  把本机/var/www/目录下的test.php文件<br>   上传到192.168.0.101这台服务器上的/var/www/目录中</p>
+<p>   3、从服务器下载整个目录<br>       scp -r username@servername:remote_dir/ /tmp/local_dir<br>     例如:scp -r <a href="mailto:codinglog@192.168.0.101" target="_blank" rel="noopener">codinglog@192.168.0.101</a> /home/kimi/test  /tmp/local_dir</p>
+<p>   4、上传目录到服务器<br>       scp  -r /tmp/local_dir username@servername:remote_dir<br>       例如：<br>       scp -r test      <a href="mailto:codinglog@192.168.0.101" target="_blank" rel="noopener">codinglog@192.168.0.101</a>:/var/www/   把当前目录下的test目录上传到服务器<br>       的/var/www/ 目录</p>
+<p>附：需要使用端口号时，要紧跟scp<br>        scp -P 8888  /path/local_filename username@servername:/path </p>
+
           
         
       
@@ -392,6 +407,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
