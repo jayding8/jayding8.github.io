@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next pisces use-motion" lang="">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -96,7 +96,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -242,6 +242,259 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/打包-解压命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayding's Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/16/打包-解压命令/" itemprop="url">打包/解压命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T20:45:28+08:00">
+                2018-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###1、zip压缩文件<br>zip命令的参数很多,可以利用”zip –help”查看，在这里就不在一一说明了，下面只说几个常用的  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -q -r -e -m -o &apos;yourName.zip&apos;  &quot;zipfile list&apos;&apos;</span><br></pre></td></tr></table></figure>
+<p>-q ：不显示压缩进度状态<br>-r ：子目录子文件全部压缩为zip  //不然的话只有”zipfile list’’文件夹被压缩，里面内容没有被压缩进去<br>-e ：压缩文件需要加密，终端会提示你输入密码的 //zip -r -P test password.zip “zipfile   list’’ 直接用’test’来加密password.zip 。<br>-m ：压缩完删除原文件<br>-o ：设置所有被压缩文件的最后修改时间为当前压缩时间</p>
+<p>跨目录的时候是这么操作的  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -q -r -e -m -o &apos;\user\someone\someDir\someFile.zip&apos; &apos;\users\someDir&apos;</span><br></pre></td></tr></table></figure>
+<p>###2、unzip解压文件  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip [options] 压缩文件名.zip，</span><br></pre></td></tr></table></figure>
+<p>具体跟多的参数可以直接执行”unzip”查看,常用options的含义分别为：<br>-x ：文件列表解解压缩文件，但不包括指定的file文件。<br>-v ：查看压缩文件目录，但不解压。<br>-t ：测试文件有无损坏，但不解压。<br>-d ：目录 把压缩文件解到指定目录下。<br>-z ：只显示压缩文件的注解。<br>-n ：不覆盖已经存在的文件。<br>-o ：覆盖已存在的文件且不要求用户确认。<br>-j ：不重建文档的目录结构，把所有文件解压到同一目录下。   </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/Git-命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayding's Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/16/Git-命令/" itemprop="url">Git 基本命令（持续更新）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T20:40:27+08:00">
+                2018-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1、从远端克隆仓库"><a href="#1、从远端克隆仓库" class="headerlink" title="1、从远端克隆仓库"></a>1、从远端克隆仓库</h3><h4 id="1-1、git-clone会在本地主机生成一个目录，与远程主机的版本库同名。"><a href="#1-1、git-clone会在本地主机生成一个目录，与远程主机的版本库同名。" class="headerlink" title="　　   1.1、git clone会在本地主机生成一个目录，与远程主机的版本库同名。"></a>　　   1.1、git clone会在本地主机生成一个目录，与远程主机的版本库同名。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  　　　 $ git clone &lt;版本库的网址&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="1-2、如果要指定不同的目录名，可以将目录名作为git-clone命令的第二个参数"><a href="#1-2、如果要指定不同的目录名，可以将目录名作为git-clone命令的第二个参数" class="headerlink" title="　　 1.2、如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数"></a>　　 1.2、如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  　　　 $ git clone &lt;版本库的网址&gt; &lt;本地目录名&gt;</span><br></pre></td></tr></table></figure>
+<p>####　　   1.3、默认一般是master分支，也可以指定分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　　　 $ git clone -b &lt;分支名&gt; &lt;版本库的网址&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2、切换分支"><a href="#2、切换分支" class="headerlink" title="2、切换分支"></a>2、切换分支</h3><h4 id="2-1、本地有对应分支"><a href="#2-1、本地有对应分支" class="headerlink" title="　　  2.1、本地有对应分支"></a>　　  2.1、本地有对应分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="2-2、本地没有对应分支"><a href="#2-2、本地没有对应分支" class="headerlink" title="　　   2.2、本地没有对应分支"></a>　　   2.2、本地没有对应分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  　　   $ git checkout &lt;分支名&gt; origin/&lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3、丢弃文件中的修改"><a href="#3、丢弃文件中的修改" class="headerlink" title="3、丢弃文件中的修改"></a>3、丢弃文件中的修改</h3><h4 id="3-1、如果没有提交到暂存区-git-status查看时，git会提醒你-如下-，可以丢弃工作区的修改-多个空格隔开"><a href="#3-1、如果没有提交到暂存区-git-status查看时，git会提醒你-如下-，可以丢弃工作区的修改-多个空格隔开" class="headerlink" title="　　3.1、如果没有提交到暂存区,git status查看时，git会提醒你(如下)，可以丢弃工作区的修改,多个空格隔开"></a>　　3.1、如果没有提交到暂存区,git status查看时，git会提醒你(如下)，可以丢弃工作区的修改,多个空格隔开</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    　　 $ git checkout — &lt;file&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="4、移除文件"><a href="#4、移除文件" class="headerlink" title="4、移除文件"></a>4、移除文件</h3><h4 id="4-1、如果没有提交到暂存区-直接rm删除-多个空格隔开"><a href="#4-1、如果没有提交到暂存区-直接rm删除-多个空格隔开" class="headerlink" title="　　 4.1、如果没有提交到暂存区,直接rm删除,多个空格隔开"></a>　　 4.1、如果没有提交到暂存区,直接rm删除,多个空格隔开</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  　　　 $ rm &lt;文件名&gt;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/Scp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -261,7 +514,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/16/Scp/" itemprop="url">Scp</a></h1>
+                <a class="post-title-link" href="/2018/07/16/Scp/" itemprop="url">利用scp传输文件</a></h1>
         
 
         <div class="post-meta">
@@ -313,12 +566,14 @@
       
         
           
-            <p>利用scp传输文件</p>
-<p>   1、从服务器下载文件<br>   scp username@servername:/path/filename /tmp/local_destination<br>   例如scp <a href="mailto:codinglog@192.168.0.101" target="_blank" rel="noopener">codinglog@192.168.0.101</a>:/home/kimi/test.txt  把192.168.0.101上的/home/kimi/test.txt<br>   的文件下载到 /tmp/local_destination<br>   2、上传本地文件到服务器<br>   scp /path/local_filename username@servername:/path<br>   例如scp /var/www/test.php  <a href="mailto:codinglog@192.168.0.101" target="_blank" rel="noopener">codinglog@192.168.0.101</a>:/var/www/  把本机/var/www/目录下的test.php文件<br>   上传到192.168.0.101这台服务器上的/var/www/目录中</p>
-<p>   3、从服务器下载整个目录<br>       scp -r username@servername:remote_dir/ /tmp/local_dir<br>     例如:scp -r <a href="mailto:codinglog@192.168.0.101" target="_blank" rel="noopener">codinglog@192.168.0.101</a> /home/kimi/test  /tmp/local_dir</p>
-<p>   4、上传目录到服务器<br>       scp  -r /tmp/local_dir username@servername:remote_dir<br>       例如：<br>       scp -r test      <a href="mailto:codinglog@192.168.0.101" target="_blank" rel="noopener">codinglog@192.168.0.101</a>:/var/www/   把当前目录下的test目录上传到服务器<br>       的/var/www/ 目录</p>
-<p>附：需要使用端口号时，要紧跟scp<br>        scp -P 8888  /path/local_filename username@servername:/path </p>
-
+            <h3 id="1、从服务器下载文件"><a href="#1、从服务器下载文件" class="headerlink" title="1、从服务器下载文件"></a>1、从服务器下载文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp username@servername:/path/filename /tmp/local_destination</span><br><span class="line">scp codinglog@192.168.0.101:/home/kimi/test.txt</span><br></pre></td></tr></table></figure>
+<p>   把192.168.0.101上的/home/kimi/test.txt的文件下载到 /tmp/local_destination</p>
+<h3 id="2、上传本地文件到服务器"><a href="#2、上传本地文件到服务器" class="headerlink" title="2、上传本地文件到服务器"></a>2、上传本地文件到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp /path/local_filename username@servername:/path  </span><br><span class="line">scp /var/www/test.php  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
+<p>   把本机/var/www/目录下的test.php文件<br>   上传到192.168.0.101这台服务器上的/var/www/目录中</p>
+<h3 id="3、从服务器下载整个目录"><a href="#3、从服务器下载整个目录" class="headerlink" title="3、从服务器下载整个目录"></a>3、从服务器下载整个目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r username@servername:remote_dir/ /tmp/local_dir </span><br><span class="line">scp -r codinglog@192.168.0.101 /home/kimi/test  /tmp/local_dir</span><br></pre></td></tr></table></figure>
+<h3 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp  -r /tmp/local_dir username@servername:remote_dir</span><br><span class="line">scp -r test  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
+<p>把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
+<h3 id="附：需要使用端口号时，要紧跟scp"><a href="#附：需要使用端口号时，要紧跟scp" class="headerlink" title="附：需要使用端口号时，要紧跟scp"></a>附：需要使用端口号时，要紧跟scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -P 8888  /path/local_filename username@servername:/path</span><br></pre></td></tr></table></figure>
           
         
       
@@ -399,7 +654,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -467,7 +722,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -566,6 +821,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 

@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1、从服务器下载文件12scp username@servername:/path/filename /tmp/local_destinationscp codinglog@192.168.0.101:/home/kimi/test.txt    把192.168.0.101上的/home/kimi/test.txt的文件下载到 /tmp/local_destination 2、上传本地文件到服务">
+<meta name="description" content="1、从远端克隆仓库　　   1.1、git clone会在本地主机生成一个目录，与远程主机的版本库同名。1  　　　 $ git clone &amp;lt;版本库的网址&amp;gt; 　　 1.2、如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数1  　　　 $ git clone &amp;lt;版本库的网址&amp;gt; &amp;lt;本地目录名&amp;gt; ####　　   1.3、默认一般是mast">
 <meta name="keywords" content="终端命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用scp传输文件">
-<meta property="og:url" content="http://yoursite.com/2018/07/16/Scp/index.html">
+<meta property="og:title" content="Git 基本命令（持续更新）">
+<meta property="og:url" content="http://yoursite.com/2018/07/16/Git-命令/index.html">
 <meta property="og:site_name" content="Jayding&#39;s Home">
-<meta property="og:description" content="1、从服务器下载文件12scp username@servername:/path/filename /tmp/local_destinationscp codinglog@192.168.0.101:/home/kimi/test.txt    把192.168.0.101上的/home/kimi/test.txt的文件下载到 /tmp/local_destination 2、上传本地文件到服务">
+<meta property="og:description" content="1、从远端克隆仓库　　   1.1、git clone会在本地主机生成一个目录，与远程主机的版本库同名。1  　　　 $ git clone &amp;lt;版本库的网址&amp;gt; 　　 1.2、如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数1  　　　 $ git clone &amp;lt;版本库的网址&amp;gt; &amp;lt;本地目录名&amp;gt; ####　　   1.3、默认一般是mast">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-16T13:22:31.000Z">
+<meta property="og:updated_time" content="2018-07-16T13:25:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用scp传输文件">
-<meta name="twitter:description" content="1、从服务器下载文件12scp username@servername:/path/filename /tmp/local_destinationscp codinglog@192.168.0.101:/home/kimi/test.txt    把192.168.0.101上的/home/kimi/test.txt的文件下载到 /tmp/local_destination 2、上传本地文件到服务">
+<meta name="twitter:title" content="Git 基本命令（持续更新）">
+<meta name="twitter:description" content="1、从远端克隆仓库　　   1.1、git clone会在本地主机生成一个目录，与远程主机的版本库同名。1  　　　 $ git clone &amp;lt;版本库的网址&amp;gt; 　　 1.2、如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数1  　　　 $ git clone &amp;lt;版本库的网址&amp;gt; &amp;lt;本地目录名&amp;gt; ####　　   1.3、默认一般是mast">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/16/Scp/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/16/Git-命令/"/>
 
 
 
 
 
-  <title>利用scp传输文件 | Jayding's Home</title>
+  <title>Git 基本命令（持续更新） | Jayding's Home</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/Scp/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/Git-命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jayding">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">利用scp传输文件</h1>
+          <h1 class="post-title" itemprop="name headline">Git 基本命令（持续更新）</h1>
         
 
         <div class="post-meta">
@@ -272,7 +272,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T17:38:25+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T20:40:27+08:00">
                 2018-07-16
               </time>
             
@@ -310,14 +310,14 @@
       
 
       
-        <h3 id="1、从服务器下载文件"><a href="#1、从服务器下载文件" class="headerlink" title="1、从服务器下载文件"></a>1、从服务器下载文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp username@servername:/path/filename /tmp/local_destination</span><br><span class="line">scp codinglog@192.168.0.101:/home/kimi/test.txt</span><br></pre></td></tr></table></figure>
-<p>   把192.168.0.101上的/home/kimi/test.txt的文件下载到 /tmp/local_destination</p>
-<h3 id="2、上传本地文件到服务器"><a href="#2、上传本地文件到服务器" class="headerlink" title="2、上传本地文件到服务器"></a>2、上传本地文件到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp /path/local_filename username@servername:/path  </span><br><span class="line">scp /var/www/test.php  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
-<p>   把本机/var/www/目录下的test.php文件<br>   上传到192.168.0.101这台服务器上的/var/www/目录中</p>
-<h3 id="3、从服务器下载整个目录"><a href="#3、从服务器下载整个目录" class="headerlink" title="3、从服务器下载整个目录"></a>3、从服务器下载整个目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r username@servername:remote_dir/ /tmp/local_dir </span><br><span class="line">scp -r codinglog@192.168.0.101 /home/kimi/test  /tmp/local_dir</span><br></pre></td></tr></table></figure>
-<h3 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp  -r /tmp/local_dir username@servername:remote_dir</span><br><span class="line">scp -r test  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
-<p>把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
-<h3 id="附：需要使用端口号时，要紧跟scp"><a href="#附：需要使用端口号时，要紧跟scp" class="headerlink" title="附：需要使用端口号时，要紧跟scp"></a>附：需要使用端口号时，要紧跟scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -P 8888  /path/local_filename username@servername:/path</span><br></pre></td></tr></table></figure>
+        <h3 id="1、从远端克隆仓库"><a href="#1、从远端克隆仓库" class="headerlink" title="1、从远端克隆仓库"></a>1、从远端克隆仓库</h3><h4 id="1-1、git-clone会在本地主机生成一个目录，与远程主机的版本库同名。"><a href="#1-1、git-clone会在本地主机生成一个目录，与远程主机的版本库同名。" class="headerlink" title="　　   1.1、git clone会在本地主机生成一个目录，与远程主机的版本库同名。"></a>　　   1.1、git clone会在本地主机生成一个目录，与远程主机的版本库同名。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  　　　 $ git clone &lt;版本库的网址&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="1-2、如果要指定不同的目录名，可以将目录名作为git-clone命令的第二个参数"><a href="#1-2、如果要指定不同的目录名，可以将目录名作为git-clone命令的第二个参数" class="headerlink" title="　　 1.2、如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数"></a>　　 1.2、如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  　　　 $ git clone &lt;版本库的网址&gt; &lt;本地目录名&gt;</span><br></pre></td></tr></table></figure>
+<p>####　　   1.3、默认一般是master分支，也可以指定分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　　　 $ git clone -b &lt;分支名&gt; &lt;版本库的网址&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2、切换分支"><a href="#2、切换分支" class="headerlink" title="2、切换分支"></a>2、切换分支</h3><h4 id="2-1、本地有对应分支"><a href="#2-1、本地有对应分支" class="headerlink" title="　　  2.1、本地有对应分支"></a>　　  2.1、本地有对应分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="2-2、本地没有对应分支"><a href="#2-2、本地没有对应分支" class="headerlink" title="　　   2.2、本地没有对应分支"></a>　　   2.2、本地没有对应分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  　　   $ git checkout &lt;分支名&gt; origin/&lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3、丢弃文件中的修改"><a href="#3、丢弃文件中的修改" class="headerlink" title="3、丢弃文件中的修改"></a>3、丢弃文件中的修改</h3><h4 id="3-1、如果没有提交到暂存区-git-status查看时，git会提醒你-如下-，可以丢弃工作区的修改-多个空格隔开"><a href="#3-1、如果没有提交到暂存区-git-status查看时，git会提醒你-如下-，可以丢弃工作区的修改-多个空格隔开" class="headerlink" title="　　3.1、如果没有提交到暂存区,git status查看时，git会提醒你(如下)，可以丢弃工作区的修改,多个空格隔开"></a>　　3.1、如果没有提交到暂存区,git status查看时，git会提醒你(如下)，可以丢弃工作区的修改,多个空格隔开</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    　　 $ git checkout — &lt;file&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="4、移除文件"><a href="#4、移除文件" class="headerlink" title="4、移除文件"></a>4、移除文件</h3><h4 id="4-1、如果没有提交到暂存区-直接rm删除-多个空格隔开"><a href="#4-1、如果没有提交到暂存区-直接rm删除-多个空格隔开" class="headerlink" title="　　 4.1、如果没有提交到暂存区,直接rm删除,多个空格隔开"></a>　　 4.1、如果没有提交到暂存区,直接rm删除,多个空格隔开</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  　　　 $ rm &lt;文件名&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -347,14 +347,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/07/16/Scp/" rel="next" title="利用scp传输文件">
+                <i class="fa fa-chevron-left"></i> 利用scp传输文件
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/16/Git-命令/" rel="prev" title="Git 基本命令（持续更新）">
-                Git 基本命令（持续更新） <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/16/打包-解压命令/" rel="prev" title="打包/解压命令">
+                打包/解压命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -478,7 +482,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、从服务器下载文件"><span class="nav-number">1.</span> <span class="nav-text">1、从服务器下载文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、上传本地文件到服务器"><span class="nav-number">2.</span> <span class="nav-text">2、上传本地文件到服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、从服务器下载整个目录"><span class="nav-number">3.</span> <span class="nav-text">3、从服务器下载整个目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、上传目录到服务器"><span class="nav-number">4.</span> <span class="nav-text">4、上传目录到服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附：需要使用端口号时，要紧跟scp"><span class="nav-number">5.</span> <span class="nav-text">附：需要使用端口号时，要紧跟scp</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、从远端克隆仓库"><span class="nav-number">1.</span> <span class="nav-text">1、从远端克隆仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1、git-clone会在本地主机生成一个目录，与远程主机的版本库同名。"><span class="nav-number">1.1.</span> <span class="nav-text">　　   1.1、git clone会在本地主机生成一个目录，与远程主机的版本库同名。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2、如果要指定不同的目录名，可以将目录名作为git-clone命令的第二个参数"><span class="nav-number">1.2.</span> <span class="nav-text">　　 1.2、如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、切换分支"><span class="nav-number">2.</span> <span class="nav-text">2、切换分支</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1、本地有对应分支"><span class="nav-number">2.1.</span> <span class="nav-text">　　  2.1、本地有对应分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2、本地没有对应分支"><span class="nav-number">2.2.</span> <span class="nav-text">　　   2.2、本地没有对应分支</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、丢弃文件中的修改"><span class="nav-number">3.</span> <span class="nav-text">3、丢弃文件中的修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1、如果没有提交到暂存区-git-status查看时，git会提醒你-如下-，可以丢弃工作区的修改-多个空格隔开"><span class="nav-number">3.1.</span> <span class="nav-text">　　3.1、如果没有提交到暂存区,git status查看时，git会提醒你(如下)，可以丢弃工作区的修改,多个空格隔开</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、移除文件"><span class="nav-number">4.</span> <span class="nav-text">4、移除文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1、如果没有提交到暂存区-直接rm删除-多个空格隔开"><span class="nav-number">4.1.</span> <span class="nav-text">　　 4.1、如果没有提交到暂存区,直接rm删除,多个空格隔开</span></a></li></ol></li></ol></div>
             
 
           </div>
