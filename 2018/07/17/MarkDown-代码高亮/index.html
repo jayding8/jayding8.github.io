@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="js,前端," />
+  <meta name="keywords" content="MarkDown," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1234567891011121314151617function getQueryString()&amp;#123;    var qs = (location.search.length &amp;gt;0 ? location.search.substring(1) : &apos;&apos;),args=&amp;#123;&amp;#125;,        items =qs.length ? qs.split(&apos;&amp;amp;&apos;) :">
-<meta name="keywords" content="js,前端">
+<meta name="description" content="MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。123```key	代码片段``` 各语言key值对应表   language key     1C 1c   ActionScript actionscript   Apache apache   AppleScript applescript   AsciiDoc asciidoc   AspectJ asciidoc">
+<meta name="keywords" content="MarkDown">
 <meta property="og:type" content="article">
-<meta property="og:title" content="获取url参数">
-<meta property="og:url" content="http://yoursite.com/2018/07/17/获取url参数/index.html">
+<meta property="og:title" content="MarkDown 代码高亮">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/MarkDown-代码高亮/index.html">
 <meta property="og:site_name" content="Jayding&#39;s Home">
-<meta property="og:description" content="1234567891011121314151617function getQueryString()&amp;#123;    var qs = (location.search.length &amp;gt;0 ? location.search.substring(1) : &apos;&apos;),args=&amp;#123;&amp;#125;,        items =qs.length ? qs.split(&apos;&amp;amp;&apos;) :">
+<meta property="og:description" content="MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。123```key	代码片段``` 各语言key值对应表   language key     1C 1c   ActionScript actionscript   Apache apache   AppleScript applescript   AsciiDoc asciidoc   AspectJ asciidoc">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-17T13:18:18.000Z">
+<meta property="og:updated_time" content="2018-07-17T14:17:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="获取url参数">
-<meta name="twitter:description" content="1234567891011121314151617function getQueryString()&amp;#123;    var qs = (location.search.length &amp;gt;0 ? location.search.substring(1) : &apos;&apos;),args=&amp;#123;&amp;#125;,        items =qs.length ? qs.split(&apos;&amp;amp;&apos;) :">
+<meta name="twitter:title" content="MarkDown 代码高亮">
+<meta name="twitter:description" content="MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。123```key	代码片段``` 各语言key值对应表   language key     1C 1c   ActionScript actionscript   Apache apache   AppleScript applescript   AsciiDoc asciidoc   AspectJ asciidoc">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/17/获取url参数/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/17/MarkDown-代码高亮/"/>
 
 
 
 
 
-  <title>获取url参数 | Jayding's Home</title>
+  <title>MarkDown 代码高亮 | Jayding's Home</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/获取url参数/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/MarkDown-代码高亮/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jayding">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">获取url参数</h1>
+          <h1 class="post-title" itemprop="name headline">MarkDown 代码高亮</h1>
         
 
         <div class="post-meta">
@@ -272,7 +272,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T13:08:26+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T21:21:45+08:00">
                 2018-07-17
               </time>
             
@@ -310,7 +310,478 @@
       
 
       
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQueryString</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> qs = (location.search.length &gt;<span class="number">0</span> ? location.search.substring(<span class="number">1</span>) : <span class="string">''</span>),args=&#123;&#125;,</span><br><span class="line">        items =qs.length ? qs.split(<span class="string">'&amp;'</span>) : [],item =<span class="literal">null</span>,name =<span class="literal">null</span>,value=<span class="literal">null</span>,</span><br><span class="line">        i =<span class="number">0</span>,len =items.length;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">        item =items[i].split(<span class="string">'='</span>);</span><br><span class="line">        name =<span class="built_in">decodeURIComponent</span>(item[<span class="number">0</span>]);</span><br><span class="line">        value =<span class="built_in">decodeURIComponent</span>(item[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">if</span>(name.length)&#123;</span><br><span class="line">            args[name] =value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> args;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> INPUT =getQueryString();</span><br><span class="line"><span class="keyword">var</span> appId =INPUT[<span class="string">'access_token'</span>];</span><br><span class="line"><span class="built_in">console</span>.log(appId);</span><br></pre></td></tr></table></figure>
+        <h4 id="MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。"><a href="#MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。" class="headerlink" title="MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。"></a>MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```key</span></span><br><span class="line"><span class="code">	代码片段</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
+<h4 id="各语言key值对应表"><a href="#各语言key值对应表" class="headerlink" title="各语言key值对应表"></a>各语言key值对应表</h4><table>
+<thead>
+<tr>
+<th>language</th>
+<th>key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1C</td>
+<td>1c</td>
+</tr>
+<tr>
+<td>ActionScript</td>
+<td>actionscript</td>
+</tr>
+<tr>
+<td>Apache</td>
+<td>apache</td>
+</tr>
+<tr>
+<td>AppleScript</td>
+<td>applescript</td>
+</tr>
+<tr>
+<td>AsciiDoc</td>
+<td>asciidoc</td>
+</tr>
+<tr>
+<td>AspectJ</td>
+<td>asciidoc</td>
+</tr>
+<tr>
+<td>AutoHotkey</td>
+<td>autohotkey</td>
+</tr>
+<tr>
+<td>AVR Assembler</td>
+<td>avrasm</td>
+</tr>
+<tr>
+<td>Axapta</td>
+<td>axapta</td>
+</tr>
+<tr>
+<td>Bash</td>
+<td>bash</td>
+</tr>
+<tr>
+<td>BrainFuck</td>
+<td>brainfuck</td>
+</tr>
+<tr>
+<td>Cap’n Proto</td>
+<td>capnproto</td>
+</tr>
+<tr>
+<td>Clojure REPL</td>
+<td>clojure</td>
+</tr>
+<tr>
+<td>Clojure</td>
+<td>clojure</td>
+</tr>
+<tr>
+<td>CMake</td>
+<td>cmake</td>
+</tr>
+<tr>
+<td>CoffeeScript</td>
+<td>coffeescript</td>
+</tr>
+<tr>
+<td>C++</td>
+<td>cpp</td>
+</tr>
+<tr>
+<td>C#</td>
+<td>cs</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>css</td>
+</tr>
+<tr>
+<td>D</td>
+<td>d</td>
+</tr>
+<tr>
+<td>Dart</td>
+<td>d</td>
+</tr>
+<tr>
+<td>Delphi</td>
+<td>delphi</td>
+</tr>
+<tr>
+<td>Diff</td>
+<td>diff</td>
+</tr>
+<tr>
+<td>Django</td>
+<td>django</td>
+</tr>
+<tr>
+<td>DOS.bat</td>
+<td>dos</td>
+</tr>
+<tr>
+<td>Dust</td>
+<td>dust</td>
+</tr>
+<tr>
+<td>Elixir</td>
+<td>elixir</td>
+</tr>
+<tr>
+<td>ERB(Embedded Ruby)</td>
+<td>erb</td>
+</tr>
+<tr>
+<td>Erlang REPL</td>
+<td>erlang-repl</td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td>erlang</td>
+</tr>
+<tr>
+<td>FIX</td>
+<td>fix</td>
+</tr>
+<tr>
+<td>F#</td>
+<td>fsharp</td>
+</tr>
+<tr>
+<td>G-code(ISO 6983)</td>
+<td>gcode</td>
+</tr>
+<tr>
+<td>Gherkin</td>
+<td>gherkin</td>
+</tr>
+<tr>
+<td>GLSL</td>
+<td>glsl</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>go</td>
+</tr>
+<tr>
+<td>Gradle</td>
+<td>gradle</td>
+</tr>
+<tr>
+<td>Groovy</td>
+<td>groovy</td>
+</tr>
+<tr>
+<td>Haml</td>
+<td>haml</td>
+</tr>
+<tr>
+<td>Handlebars</td>
+<td>handlebars</td>
+</tr>
+<tr>
+<td>Haskell</td>
+<td>haskell</td>
+</tr>
+<tr>
+<td>Haxe</td>
+<td>haxe</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>html</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>http</td>
+</tr>
+<tr>
+<td>Ini file</td>
+<td>ini</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>java</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>javascript</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>json</td>
+</tr>
+<tr>
+<td>Lasso</td>
+<td>lasso</td>
+</tr>
+<tr>
+<td>Less</td>
+<td>less</td>
+</tr>
+<tr>
+<td>Lisp</td>
+<td>lisp</td>
+</tr>
+<tr>
+<td>LiveCode</td>
+<td>livecodeserver</td>
+</tr>
+<tr>
+<td>LiveScript</td>
+<td>livescript</td>
+</tr>
+<tr>
+<td>Lua</td>
+<td>lua</td>
+</tr>
+<tr>
+<td>Makefile</td>
+<td>makefile</td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td>markdown</td>
+</tr>
+<tr>
+<td>Mathematica</td>
+<td>mathematica</td>
+</tr>
+<tr>
+<td>Matlab</td>
+<td>matlab</td>
+</tr>
+<tr>
+<td>MEL (Maya Embedded Language)</td>
+<td>mel</td>
+</tr>
+<tr>
+<td>Mercury</td>
+<td>mercury</td>
+</tr>
+<tr>
+<td>Mizar</td>
+<td>mizar</td>
+</tr>
+<tr>
+<td>Monkey</td>
+<td>monkey</td>
+</tr>
+<tr>
+<td>Nginx</td>
+<td>nginx</td>
+</tr>
+<tr>
+<td>Nimrod</td>
+<td>nimrod</td>
+</tr>
+<tr>
+<td>Nix</td>
+<td>nix</td>
+</tr>
+<tr>
+<td>NSIS</td>
+<td>nsis</td>
+</tr>
+<tr>
+<td>ObjectiveC</td>
+<td>objectivec</td>
+</tr>
+<tr>
+<td>OCaml</td>
+<td>ocaml</td>
+</tr>
+<tr>
+<td>Oxygene</td>
+<td>oxygene</td>
+</tr>
+<tr>
+<td>Parser 3</td>
+<td>parser3</td>
+</tr>
+<tr>
+<td>Perl</td>
+<td>perl</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>php</td>
+</tr>
+<tr>
+<td>PowerShell</td>
+<td>powershell</td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>processing</td>
+</tr>
+<tr>
+<td>Python’s profiler</td>
+<td>output    profile</td>
+</tr>
+<tr>
+<td>Protocol Buffers</td>
+<td>protobuf</td>
+</tr>
+<tr>
+<td>Puppet</td>
+<td>puppet</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>python</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>q</td>
+</tr>
+<tr>
+<td>R</td>
+<td>r</td>
+</tr>
+<tr>
+<td>RenderMan RIB</td>
+<td>rib</td>
+</tr>
+<tr>
+<td>Roboconf</td>
+<td>roboconf</td>
+</tr>
+<tr>
+<td>RenderMan RSL</td>
+<td>rsl</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>ruby</td>
+</tr>
+<tr>
+<td>Oracle Rules Language</td>
+<td>ruleslanguage</td>
+</tr>
+<tr>
+<td>Rust</td>
+<td>rust</td>
+</tr>
+<tr>
+<td>Scala</td>
+<td>scala</td>
+</tr>
+<tr>
+<td>Scheme</td>
+<td>scheme</td>
+</tr>
+<tr>
+<td>Scilab</td>
+<td>scilab</td>
+</tr>
+<tr>
+<td>SCSS</td>
+<td>scss</td>
+</tr>
+<tr>
+<td>Smali</td>
+<td>smali</td>
+</tr>
+<tr>
+<td>SmallTalk</td>
+<td>smalltalk</td>
+</tr>
+<tr>
+<td>SML</td>
+<td>sml</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>sql</td>
+</tr>
+<tr>
+<td>Stata</td>
+<td>stata</td>
+</tr>
+<tr>
+<td>STEP Part21(ISO 10303-21)</td>
+<td>step21</td>
+</tr>
+<tr>
+<td>Stylus</td>
+<td>stylus</td>
+</tr>
+<tr>
+<td>Swift</td>
+<td>swift</td>
+</tr>
+<tr>
+<td>Tcl</td>
+<td>tcl</td>
+</tr>
+<tr>
+<td>Tex</td>
+<td>tex</td>
+</tr>
+<tr>
+<td>text</td>
+<td>text/plain</td>
+</tr>
+<tr>
+<td>Thrift</td>
+<td>thrift</td>
+</tr>
+<tr>
+<td>Twig</td>
+<td>twig</td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td>typescript</td>
+</tr>
+<tr>
+<td>Vala</td>
+<td>vala</td>
+</tr>
+<tr>
+<td>VB.NET</td>
+<td>vbnet</td>
+</tr>
+<tr>
+<td>VBScript in HTML</td>
+<td>vbscript-html</td>
+</tr>
+<tr>
+<td>VBScript</td>
+<td>vbscript</td>
+</tr>
+<tr>
+<td>Verilog</td>
+<td>verilog</td>
+</tr>
+<tr>
+<td>VHDL</td>
+<td>vhdl</td>
+</tr>
+<tr>
+<td>Vim Script</td>
+<td>vim</td>
+</tr>
+<tr>
+<td>Intel x86 Assembly</td>
+<td>x86asm</td>
+</tr>
+<tr>
+<td>XL</td>
+<td>xl</td>
+</tr>
+<tr>
+<td>XML</td>
+<td>xml</td>
+</tr>
+<tr>
+<td>YAML</td>
+<td>yml</td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
     
@@ -327,9 +798,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag"># js</a>
-          
-            <a href="/tags/前端/" rel="tag"># 前端</a>
+            <a href="/tags/MarkDown/" rel="tag"># MarkDown</a>
           
         </div>
       
@@ -342,8 +811,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/16/打包-解压命令/" rel="next" title="打包/解压命令">
-                <i class="fa fa-chevron-left"></i> 打包/解压命令
+              <a href="/2018/07/17/array-map/" rel="next" title="array_map">
+                <i class="fa fa-chevron-left"></i> array_map
               </a>
             
           </div>
@@ -351,10 +820,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/17/array-map/" rel="prev" title="array_map">
-                array_map <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -406,8 +871,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -458,6 +932,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。"><span class="nav-number">1.</span> <span class="nav-text">MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#各语言key值对应表"><span class="nav-number">2.</span> <span class="nav-text">各语言key值对应表</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
