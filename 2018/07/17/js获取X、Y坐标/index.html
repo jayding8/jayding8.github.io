@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="php," />
+  <meta name="keywords" content="js,前端," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="类里面调用array_map()123456789101112131415161718192021222324class material&amp;#123;    function gets_filename_prefix1($filepath)    &amp;#123;        $filename = basename( $filepath );        $arr = explode(&quot;.&quot;,$">
-<meta name="keywords" content="php">
+<meta name="description" content="event.offsetX、event.clientX、event.screenX区别（附图）1、event.clientX、event.clientY鼠标相对于浏览器窗口可视区域的X，Y坐标（窗口坐标），可视区域不包括工具栏和滚动条。IE事件和标准事件都定义了这2个属性。   2、event.pageX、event.pageY类似于event.clientX、event.clientY，但它们使">
+<meta name="keywords" content="js,前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="array_map">
-<meta property="og:url" content="http://yoursite.com/2018/07/17/array-map/index.html">
+<meta property="og:title" content="js获取X、Y坐标">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/js获取X、Y坐标/index.html">
 <meta property="og:site_name" content="Jayding&#39;s Home">
-<meta property="og:description" content="类里面调用array_map()123456789101112131415161718192021222324class material&amp;#123;    function gets_filename_prefix1($filepath)    &amp;#123;        $filename = basename( $filepath );        $arr = explode(&quot;.&quot;,$">
+<meta property="og:description" content="event.offsetX、event.clientX、event.screenX区别（附图）1、event.clientX、event.clientY鼠标相对于浏览器窗口可视区域的X，Y坐标（窗口坐标），可视区域不包括工具栏和滚动条。IE事件和标准事件都定义了这2个属性。   2、event.pageX、event.pageY类似于event.clientX、event.clientY，但它们使">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-17T13:19:06.000Z">
+<meta property="og:image" content="http://yoursite.com/2018/07/17/js获取X、Y坐标/images/坐标.png">
+<meta property="og:updated_time" content="2018-07-17T15:17:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="array_map">
-<meta name="twitter:description" content="类里面调用array_map()123456789101112131415161718192021222324class material&amp;#123;    function gets_filename_prefix1($filepath)    &amp;#123;        $filename = basename( $filepath );        $arr = explode(&quot;.&quot;,$">
+<meta name="twitter:title" content="js获取X、Y坐标">
+<meta name="twitter:description" content="event.offsetX、event.clientX、event.screenX区别（附图）1、event.clientX、event.clientY鼠标相对于浏览器窗口可视区域的X，Y坐标（窗口坐标），可视区域不包括工具栏和滚动条。IE事件和标准事件都定义了这2个属性。   2、event.pageX、event.pageY类似于event.clientX、event.clientY，但它们使">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/17/js获取X、Y坐标/images/坐标.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/17/array-map/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/17/js获取X、Y坐标/"/>
 
 
 
 
 
-  <title>array_map | Jayding's Home</title>
+  <title>js获取X、Y坐标 | Jayding's Home</title>
   
 
 
@@ -243,7 +245,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/array-map/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/js获取X、Y坐标/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jayding">
@@ -260,7 +262,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">array_map</h1>
+          <h1 class="post-title" itemprop="name headline">js获取X、Y坐标</h1>
         
 
         <div class="post-meta">
@@ -272,7 +274,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T21:00:51+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T22:58:01+08:00">
                 2018-07-17
               </time>
             
@@ -310,7 +312,11 @@
       
 
       
-        <h4 id="类里面调用array-map"><a href="#类里面调用array-map" class="headerlink" title="类里面调用array_map()"></a>类里面调用array_map()</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">material</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">gets_filename_prefix1</span><span class="params">($filepath)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $filename = basename( $filepath );</span><br><span class="line">        $arr = explode(<span class="string">"."</span>,$filename);</span><br><span class="line">        $parameter = $arr[count($arr)<span class="number">-1</span>];</span><br><span class="line">        $name  = str_replace(<span class="string">"."</span>.$parameter,<span class="string">""</span>,$filename);</span><br><span class="line">        <span class="keyword">return</span> $name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">xxxx</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $url_arr = <span class="keyword">array</span> (</span><br><span class="line">            <span class="number">0</span> =&gt; <span class="string">'/Users/jayding/Projects/livsns/uploads/ziptmp/1499244509/test/3.jpg'</span>,</span><br><span class="line">            <span class="number">1</span> =&gt; <span class="string">'/Users/jayding/Projects/livsns/uploads/ziptmp/1499244509/test/2.jpeg'</span>,</span><br><span class="line">            <span class="number">2</span> =&gt; <span class="string">'/Users/jayding/Projects/livsns/uploads/ziptmp/1499244509/test/1.jpg'</span>,</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        $info_arr_prefix  = array_map(<span class="keyword">array</span>(<span class="string">'material'</span>, <span class="string">'gets_filename_prefix1'</span>), $url_arr);</span><br><span class="line">        print_r($info_arr_prefix);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">$a = <span class="keyword">new</span> material;</span><br><span class="line">$a-&gt;xxxx();</span><br></pre></td></tr></table></figure>
+        <h3 id="event-offsetX、event-clientX、event-screenX区别（附图）"><a href="#event-offsetX、event-clientX、event-screenX区别（附图）" class="headerlink" title="event.offsetX、event.clientX、event.screenX区别（附图）"></a>event.offsetX、event.clientX、event.screenX区别（附图）</h3><h4 id="1、event-clientX、event-clientY"><a href="#1、event-clientX、event-clientY" class="headerlink" title="1、event.clientX、event.clientY"></a>1、event.clientX、event.clientY</h4><p>鼠标相对于浏览器窗口可视区域的X，Y坐标（窗口坐标），可视区域不包括工具栏和滚动条。<font color="#dd00dd">IE事件和标准事件都定义了这2个属性。</font>  </p>
+<h4 id="2、event-pageX、event-pageY"><a href="#2、event-pageX、event-pageY" class="headerlink" title="2、event.pageX、event.pageY"></a>2、event.pageX、event.pageY</h4><p>类似于event.clientX、event.clientY，但它们使用的是文档坐标而非窗口坐标。<font color="#dd00dd">这2个属性不是标准属性，但得到了广泛支持。IE事件中没有这2个属性。</font>  </p>
+<h4 id="3、event-offsetX、event-offsetY"><a href="#3、event-offsetX、event-offsetY" class="headerlink" title="3、event.offsetX、event.offsetY"></a>3、event.offsetX、event.offsetY</h4><p>鼠标相对于事件源元素（srcElement）的X,Y坐标，<font color="#dd00dd">只有IE事件有这2个属性，标准事件没有对应的属性。</font>    </p>
+<h4 id="4、event-screenX、event-screenY"><a href="#4、event-screenX、event-screenY" class="headerlink" title="4、event.screenX、event.screenY"></a>4、event.screenX、event.screenY</h4><p>鼠标相对于用户显示器屏幕左上角的X,Y坐标。<font color="#dd00dd">标准事件和IE事件都定义了这2个属性。</font>  </p>
+<p><img src="./images/坐标.png"></p>
 
       
     </div>
@@ -328,7 +334,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/php/" rel="tag"># php</a>
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
           
         </div>
       
@@ -341,8 +349,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/17/获取url参数/" rel="next" title="获取url参数">
-                <i class="fa fa-chevron-left"></i> 获取url参数
+              <a href="/2018/07/17/MarkDown-代码高亮/" rel="next" title="MarkDown 代码高亮">
+                <i class="fa fa-chevron-left"></i> MarkDown 代码高亮
               </a>
             
           </div>
@@ -350,10 +358,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/17/MarkDown-代码高亮/" rel="prev" title="MarkDown 代码高亮">
-                MarkDown 代码高亮 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -476,7 +480,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#类里面调用array-map"><span class="nav-number">1.</span> <span class="nav-text">类里面调用array_map()</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#event-offsetX、event-clientX、event-screenX区别（附图）"><span class="nav-number">1.</span> <span class="nav-text">event.offsetX、event.clientX、event.screenX区别（附图）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、event-clientX、event-clientY"><span class="nav-number">1.1.</span> <span class="nav-text">1、event.clientX、event.clientY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、event-pageX、event-pageY"><span class="nav-number">1.2.</span> <span class="nav-text">2、event.pageX、event.pageY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、event-offsetX、event-offsetY"><span class="nav-number">1.3.</span> <span class="nav-text">3、event.offsetX、event.offsetY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、event-screenX、event-screenY"><span class="nav-number">1.4.</span> <span class="nav-text">4、event.screenX、event.screenY</span></a></li></ol></li></ol></div>
             
 
           </div>
