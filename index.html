@@ -242,6 +242,126 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/array-map/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayding's Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/17/array-map/" itemprop="url">array_map</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T21:00:51+08:00">
+                2018-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="类里面调用array-map"><a href="#类里面调用array-map" class="headerlink" title="类里面调用array_map()"></a>类里面调用array_map()</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">material</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">gets_filename_prefix1</span><span class="params">($filepath)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $filename = basename( $filepath );</span><br><span class="line">        $arr = explode(<span class="string">"."</span>,$filename);</span><br><span class="line">        $parameter = $arr[count($arr)<span class="number">-1</span>];</span><br><span class="line">        $name  = str_replace(<span class="string">"."</span>.$parameter,<span class="string">""</span>,$filename);</span><br><span class="line">        <span class="keyword">return</span> $name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">xxxx</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $url_arr = <span class="keyword">array</span> (</span><br><span class="line">            <span class="number">0</span> =&gt; <span class="string">'/Users/jayding/Projects/livsns/uploads/ziptmp/1499244509/test/3.jpg'</span>,</span><br><span class="line">            <span class="number">1</span> =&gt; <span class="string">'/Users/jayding/Projects/livsns/uploads/ziptmp/1499244509/test/2.jpeg'</span>,</span><br><span class="line">            <span class="number">2</span> =&gt; <span class="string">'/Users/jayding/Projects/livsns/uploads/ziptmp/1499244509/test/1.jpg'</span>,</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        $info_arr_prefix  = array_map(<span class="keyword">array</span>(<span class="string">'material'</span>, <span class="string">'gets_filename_prefix1'</span>), $url_arr);</span><br><span class="line">        print_r($info_arr_prefix);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">$a = <span class="keyword">new</span> material;</span><br><span class="line">$a-&gt;xxxx();</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/获取url参数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -313,7 +433,7 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function getQueryString()&#123;</span><br><span class="line">    var qs = (location.search.length &gt;0 ? location.search.substring(1) : &apos;&apos;),args=&#123;&#125;,</span><br><span class="line">        items =qs.length ? qs.split(&apos;&amp;&apos;) : [],item =null,name =null,value=null,</span><br><span class="line">        i =0,len =items.length;</span><br><span class="line">    for(i=0;i&lt;len;i++)&#123;</span><br><span class="line">        item =items[i].split(&apos;=&apos;);</span><br><span class="line">        name =decodeURIComponent(item[0]);</span><br><span class="line">        value =decodeURIComponent(item[1]);</span><br><span class="line">        if(name.length)&#123;</span><br><span class="line">            args[name] =value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return args;</span><br><span class="line">&#125;</span><br><span class="line">var INPUT =getQueryString();</span><br><span class="line">var appId =INPUT[&apos;access_token&apos;];</span><br><span class="line">console.log(appId);</span><br></pre></td></tr></table></figure>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQueryString</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> qs = (location.search.length &gt;<span class="number">0</span> ? location.search.substring(<span class="number">1</span>) : <span class="string">''</span>),args=&#123;&#125;,</span><br><span class="line">        items =qs.length ? qs.split(<span class="string">'&amp;'</span>) : [],item =<span class="literal">null</span>,name =<span class="literal">null</span>,value=<span class="literal">null</span>,</span><br><span class="line">        i =<span class="number">0</span>,len =items.length;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">        item =items[i].split(<span class="string">'='</span>);</span><br><span class="line">        name =<span class="built_in">decodeURIComponent</span>(item[<span class="number">0</span>]);</span><br><span class="line">        value =<span class="built_in">decodeURIComponent</span>(item[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">if</span>(name.length)&#123;</span><br><span class="line">            args[name] =value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> args;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> INPUT =getQueryString();</span><br><span class="line"><span class="keyword">var</span> appId =INPUT[<span class="string">'access_token'</span>];</span><br><span class="line"><span class="built_in">console</span>.log(appId);</span><br></pre></td></tr></table></figure>
           
         
       
@@ -771,7 +891,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -784,7 +904,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
