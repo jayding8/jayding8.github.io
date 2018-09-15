@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="##如何在mac下安装Linux？ ###一、准备工作　1、vmware,貌似有免费版可以使用（VirtualBox不能全屏，很难受）　2、CentOS（https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso） ###二、开始安装　1、手动新建一个Linux虚拟机，按提示操作就可以了（别忘记">
+<meta name="description" content="##如何在mac下安装Linux？ 一、准备工作　1、vmware,貌似有免费版可以使用（VirtualBox不能全屏，很难受）　2、CentOS（https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso） 二、开始安装　1、手动新建一个Linux虚拟机，按提示操作就可以了（别忘记选择镜像，基">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux虚拟机安装及基本环境配置">
 <meta property="og:url" content="http://yoursite.com/2018/09/15/Linux虚拟机安装及基本环境配置/index.html">
 <meta property="og:site_name" content="Jayding&#39;s Home">
-<meta property="og:description" content="##如何在mac下安装Linux？ ###一、准备工作　1、vmware,貌似有免费版可以使用（VirtualBox不能全屏，很难受）　2、CentOS（https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso） ###二、开始安装　1、手动新建一个Linux虚拟机，按提示操作就可以了（别忘记">
+<meta property="og:description" content="##如何在mac下安装Linux？ 一、准备工作　1、vmware,貌似有免费版可以使用（VirtualBox不能全屏，很难受）　2、CentOS（https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso） 二、开始安装　1、手动新建一个Linux虚拟机，按提示操作就可以了（别忘记选择镜像，基">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/self/ssh/1.png">
 <meta property="og:image" content="http://yoursite.com/images/self/ssh/2.png">
@@ -93,10 +93,10 @@
 <meta property="og:image" content="http://yoursite.com/images/self/ssh/4.png">
 <meta property="og:image" content="http://yoursite.com/images/self/ssh/5.png">
 <meta property="og:image" content="http://yoursite.com/images/self/ssh/6.png">
-<meta property="og:updated_time" content="2018-09-15T04:02:12.000Z">
+<meta property="og:updated_time" content="2018-09-15T04:06:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux虚拟机安装及基本环境配置">
-<meta name="twitter:description" content="##如何在mac下安装Linux？ ###一、准备工作　1、vmware,貌似有免费版可以使用（VirtualBox不能全屏，很难受）　2、CentOS（https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso） ###二、开始安装　1、手动新建一个Linux虚拟机，按提示操作就可以了（别忘记">
+<meta name="twitter:description" content="##如何在mac下安装Linux？ 一、准备工作　1、vmware,貌似有免费版可以使用（VirtualBox不能全屏，很难受）　2、CentOS（https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso） 二、开始安装　1、手动新建一个Linux虚拟机，按提示操作就可以了（别忘记选择镜像，基">
 <meta name="twitter:image" content="http://yoursite.com/images/self/ssh/1.png">
 
 
@@ -318,17 +318,15 @@
 
       
         <p>##如何在mac下安装Linux？</p>
-<p>###一、准备工作<br>　1、vmware,貌似有免费版可以使用（VirtualBox不能全屏，很难受）<br>　2、CentOS（<a href="https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso）" target="_blank" rel="noopener">https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso）</a></p>
-<p>###二、开始安装<br>　1、手动新建一个Linux虚拟机，按提示操作就可以了（别忘记选择镜像，基本不会有问题）<br>　2、安装完重启，要求输入用户名和密码，用户名是root，密码是安装过程中自己设置的</p>
-<p>###三、安装配置ssh<br>　为什么要安装ssh？虚拟机那么丑陋僵硬的界面操作，是人类能接受的?   </p>
-<p>####　1、先确认是否默认安装了ssh</p>
-<blockquote>
+<h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><p>　1、vmware,貌似有免费版可以使用（VirtualBox不能全屏，很难受）<br>　2、CentOS（<a href="https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso）" target="_blank" rel="noopener">https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso）</a></p>
+<h3 id="二、开始安装"><a href="#二、开始安装" class="headerlink" title="二、开始安装"></a>二、开始安装</h3><p>　1、手动新建一个Linux虚拟机，按提示操作就可以了（别忘记选择镜像，基本不会有问题）<br>　2、安装完重启，要求输入用户名和密码，用户名是root，密码是安装过程中自己设置的</p>
+<h3 id="三、安装配置ssh"><a href="#三、安装配置ssh" class="headerlink" title="三、安装配置ssh"></a>三、安装配置ssh</h3><p>　为什么要安装ssh？虚拟机那么丑陋僵硬的界面操作，是人类能接受的?   </p>
+<h4 id="1、先确认是否默认安装了ssh"><a href="#1、先确认是否默认安装了ssh" class="headerlink" title="　1、先确认是否默认安装了ssh"></a>　1、先确认是否默认安装了ssh</h4><blockquote>
 <p>rpm -qa | grep ssh   </p>
 </blockquote>
 <p>　<img src="/images/self/ssh/1.png"></p>
 <p>　Ps:我用的是6.10，默认安装了ssh</p>
-<p>####　2、查看ssh状态</p>
-<blockquote>
+<h4 id="2、查看ssh状态"><a href="#2、查看ssh状态" class="headerlink" title="　2、查看ssh状态"></a>　2、查看ssh状态</h4><blockquote>
 <p>service ssh status   或者<br>/etc/init.d/sshd start/stop/status/restart    </p>
 </blockquote>
 <p>　<img src="/images/self/ssh/2.png"></p>
@@ -337,12 +335,11 @@
 <p>netstat -antp | grep sshd    </p>
 </blockquote>
 <p>　<img src="/images/self/ssh/3.png"></p>
-<p>####　3、设置开机启动   </p>
-<blockquote>
+<h4 id="3、设置开机启动"><a href="#3、设置开机启动" class="headerlink" title="　3、设置开机启动"></a>　3、设置开机启动</h4><blockquote>
 <p>chkconfig sshd on<br>chkconfig –list sshd   </p>
 </blockquote>
 <p>　<img src="/images/self/ssh/4.png">    </p>
-<p>####　4、配置静态ip<br>　　Ⅰ、网络适配器选择桥接模式<br>　　　<img src="/images/self/ssh/5.png"><br>　　Ⅱ、编辑网卡配置文件 </p>
+<h4 id="4、配置静态ip"><a href="#4、配置静态ip" class="headerlink" title="　4、配置静态ip"></a>　4、配置静态ip</h4><p>　　Ⅰ、网络适配器选择桥接模式<br>　　　<img src="/images/self/ssh/5.png"><br>　　Ⅱ、编辑网卡配置文件 </p>
 <blockquote>
 <p>vi /etc/sysconfig/network-scripts/ifcfg-eth0   </p>
 </blockquote>
@@ -437,8 +434,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -489,6 +495,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、准备工作"><span class="nav-number">1.</span> <span class="nav-text">一、准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、开始安装"><span class="nav-number">2.</span> <span class="nav-text">二、开始安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、安装配置ssh"><span class="nav-number">3.</span> <span class="nav-text">三、安装配置ssh</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、先确认是否默认安装了ssh"><span class="nav-number">3.1.</span> <span class="nav-text">　1、先确认是否默认安装了ssh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、查看ssh状态"><span class="nav-number">3.2.</span> <span class="nav-text">　2、查看ssh状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、设置开机启动"><span class="nav-number">3.3.</span> <span class="nav-text">　3、设置开机启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、配置静态ip"><span class="nav-number">3.4.</span> <span class="nav-text">　4、配置静态ip</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
