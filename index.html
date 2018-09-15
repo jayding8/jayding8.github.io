@@ -242,6 +242,274 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/15/Linux虚拟机安装及基本环境配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayding's Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/15/Linux虚拟机安装及基本环境配置/" itemprop="url">Linux虚拟机安装及基本环境配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-15T08:55:35+08:00">
+                2018-09-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##如何在mac下安装Linux？</p>
+<p>###一、准备工作<br>　1、vmware,貌似有免费版可以使用（VirtualBox不能全屏，很难受）<br>　2、CentOS（<a href="https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso）" target="_blank" rel="noopener">https://mirrors.aliyun.com/centos/6.10/isos/x86_64/CentOS-6.10-x86_64-minimal.iso）</a></p>
+<p>###二、开始安装<br>　1、手动新建一个Linux虚拟机，按提示操作就可以了（别忘记选择镜像，基本不会有问题）<br>　2、安装完重启，要求输入用户名和密码，用户名是root，密码是安装过程中自己设置的</p>
+<p>###三、安装配置ssh<br>　为什么要安装ssh？虚拟机那么丑陋僵硬的界面操作，是人类能接受的?   </p>
+<p>####　1、先确认是否默认安装了ssh</p>
+<blockquote>
+<p>rpm -qa | grep ssh   </p>
+</blockquote>
+<p>　<img src="/images/self/ssh/1.png"></p>
+<p>　Ps:我用的是6.10，默认安装了ssh</p>
+<p>####　2、查看ssh状态</p>
+<blockquote>
+<p>service ssh status   或者<br>/etc/init.d/sshd start/stop/status/restart    </p>
+</blockquote>
+<p>　<img src="/images/self/ssh/2.png"></p>
+<p>　确认22端口是否开启   </p>
+<blockquote>
+<p>netstat -antp | grep sshd    </p>
+</blockquote>
+<p>　<img src="/images/self/ssh/3.png"></p>
+<p>####　3、设置开机启动   </p>
+<blockquote>
+<p>chkconfig sshd on<br>chkconfig –list sshd   </p>
+</blockquote>
+<p>　<img src="/images/self/ssh/4.png">    </p>
+<p>####　4、配置静态ip<br>　　Ⅰ、网络适配器选择桥接模式<br>　　　<img src="/images/self/ssh/5.png"><br>　　Ⅱ、编辑网卡配置文件 </p>
+<blockquote>
+<p>vi /etc/sysconfig/network-scripts/ifcfg-eth0   </p>
+</blockquote>
+<p>　　　<img src="/images/self/ssh/6.png"><br>　　Ⅲ、重启网络（service network restart）   </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/28/算法小计/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayding's Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/28/算法小计/" itemprop="url">算法小计</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-28T19:17:12+08:00">
+                2018-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/js获取X、Y坐标/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -325,7 +593,7 @@
 <h4 id="4、event-screenX、event-screenY"><a href="#4、event-screenX、event-screenY" class="headerlink" title="4、event.screenX、event.screenY"></a>4、event.screenX、event.screenY</h4><blockquote>
 <p>鼠标相对于用户显示器屏幕左上角的X,Y坐标。<font color="#dd00dd">标准事件和IE事件都定义了这2个属性。</font>  </p>
 </blockquote>
-<p><img src="/images/坐标.png"></p>
+<p><img src="/images/self/坐标.png"></p>
 
           
         
@@ -1613,7 +1881,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1626,7 +1894,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
