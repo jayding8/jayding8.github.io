@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="js,前端," />
+  <meta name="keywords" content="MySQL," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="1234567891011121314151617function getQueryString()&amp;#123;    var qs = (location.search.length &amp;gt;0 ? location.search.substring(1) : &apos;&apos;),args=&amp;#123;&amp;#125;,        items =qs.length ? qs.split(&apos;&amp;amp;&apos;) :">
-<meta name="keywords" content="js,前端">
+<meta name="description" content="一条SQL查询语句是如何执行的？####初识MySQL：1、MySQL可以分为Server层和存储引擎层两部分。如图：  Server层：包括连接器、查询缓存、分析器、优化器、执行器等，涵盖 MySQL 的大多数核心服务功能，以及所有的内置函数（如日期、时间、数学和加密函数等），所有跨存储引擎的功能都在这一层实现，比如存储过程、触发器、视图等。      存储引擎层：负责数据的存储和提取。其架构模">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="获取url参数">
-<meta property="og:url" content="http://yoursite.com/2018/07/17/获取url参数/index.html">
+<meta property="og:title" content="MySQL">
+<meta property="og:url" content="http://yoursite.com/2018/12/27/MySQL/index.html">
 <meta property="og:site_name" content="Jayding&#39;s Home">
-<meta property="og:description" content="1234567891011121314151617function getQueryString()&amp;#123;    var qs = (location.search.length &amp;gt;0 ? location.search.substring(1) : &apos;&apos;),args=&amp;#123;&amp;#125;,        items =qs.length ? qs.split(&apos;&amp;amp;&apos;) :">
+<meta property="og:description" content="一条SQL查询语句是如何执行的？####初识MySQL：1、MySQL可以分为Server层和存储引擎层两部分。如图：  Server层：包括连接器、查询缓存、分析器、优化器、执行器等，涵盖 MySQL 的大多数核心服务功能，以及所有的内置函数（如日期、时间、数学和加密函数等），所有跨存储引擎的功能都在这一层实现，比如存储过程、触发器、视图等。      存储引擎层：负责数据的存储和提取。其架构模">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-17T13:18:18.000Z">
+<meta property="og:image" content="http://yoursite.com/images/self/mysql/mysql.png">
+<meta property="og:updated_time" content="2018-12-27T11:47:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="获取url参数">
-<meta name="twitter:description" content="1234567891011121314151617function getQueryString()&amp;#123;    var qs = (location.search.length &amp;gt;0 ? location.search.substring(1) : &apos;&apos;),args=&amp;#123;&amp;#125;,        items =qs.length ? qs.split(&apos;&amp;amp;&apos;) :">
+<meta name="twitter:title" content="MySQL">
+<meta name="twitter:description" content="一条SQL查询语句是如何执行的？####初识MySQL：1、MySQL可以分为Server层和存储引擎层两部分。如图：  Server层：包括连接器、查询缓存、分析器、优化器、执行器等，涵盖 MySQL 的大多数核心服务功能，以及所有的内置函数（如日期、时间、数学和加密函数等），所有跨存储引擎的功能都在这一层实现，比如存储过程、触发器、视图等。      存储引擎层：负责数据的存储和提取。其架构模">
+<meta name="twitter:image" content="http://yoursite.com/images/self/mysql/mysql.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/17/获取url参数/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/27/MySQL/"/>
 
 
 
 
 
-  <title>获取url参数 | Jayding's Home</title>
+  <title>MySQL | Jayding's Home</title>
   
 
 
@@ -243,7 +245,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/获取url参数/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/27/MySQL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jayding">
@@ -260,7 +262,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">获取url参数</h1>
+          <h1 class="post-title" itemprop="name headline">MySQL</h1>
         
 
         <div class="post-meta">
@@ -272,8 +274,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T13:08:26+08:00">
-                2018-07-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-27T19:24:41+08:00">
+                2018-12-27
               </time>
             
 
@@ -310,7 +312,14 @@
       
 
       
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQueryString</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> qs = (location.search.length &gt;<span class="number">0</span> ? location.search.substring(<span class="number">1</span>) : <span class="string">''</span>),args=&#123;&#125;,</span><br><span class="line">        items =qs.length ? qs.split(<span class="string">'&amp;'</span>) : [],item =<span class="literal">null</span>,name =<span class="literal">null</span>,value=<span class="literal">null</span>,</span><br><span class="line">        i =<span class="number">0</span>,len =items.length;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">        item =items[i].split(<span class="string">'='</span>);</span><br><span class="line">        name =<span class="built_in">decodeURIComponent</span>(item[<span class="number">0</span>]);</span><br><span class="line">        value =<span class="built_in">decodeURIComponent</span>(item[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">if</span>(name.length)&#123;</span><br><span class="line">            args[name] =value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> args;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> INPUT =getQueryString();</span><br><span class="line"><span class="keyword">var</span> appId =INPUT[<span class="string">'access_token'</span>];</span><br><span class="line"><span class="built_in">console</span>.log(appId);</span><br></pre></td></tr></table></figure>
+        <h3 id="一条SQL查询语句是如何执行的？"><a href="#一条SQL查询语句是如何执行的？" class="headerlink" title="一条SQL查询语句是如何执行的？"></a>一条SQL查询语句是如何执行的？</h3><p>####初识MySQL：<br>1、MySQL可以分为Server层和存储引擎层两部分。如图：<br><img src="/images/self/mysql/mysql.png"></p>
+<blockquote>
+<p>Server层：包括连接器、查询缓存、分析器、优化器、执行器等，涵盖 MySQL 的大多数核心服务功能，以及所有的内置函数（如日期、时间、数学和加密函数等），所有跨存储引擎的功能都在这一层实现，比如存储过程、触发器、视图等。   </p>
+</blockquote>
+<blockquote>
+<p>存储引擎层：负责数据的存储和提取。其架构模式是插件式的，支持InnoDB、MyISAM、Memory 等多个存储引擎。现在最常用的存储引擎是 InnoDB，它从 MySQL 5.5.5 版本开始成为了默认存储引擎。</p>
+</blockquote>
+
       
     </div>
     
@@ -327,9 +336,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag"># js</a>
-          
-            <a href="/tags/前端/" rel="tag"># 前端</a>
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
           
         </div>
       
@@ -342,8 +349,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/16/打包-解压命令/" rel="next" title="打包/解压命令">
-                <i class="fa fa-chevron-left"></i> 打包/解压命令
+              <a href="/2018/09/15/Linux虚拟机安装及基本环境配置/" rel="next" title="Linux虚拟机安装及基本环境配置">
+                <i class="fa fa-chevron-left"></i> Linux虚拟机安装及基本环境配置
               </a>
             
           </div>
@@ -351,10 +358,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/17/array-map/" rel="prev" title="array_map">
-                array_map <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -406,8 +409,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -458,6 +470,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一条SQL查询语句是如何执行的？"><span class="nav-number">1.</span> <span class="nav-text">一条SQL查询语句是如何执行的？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
