@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jayding&#39;s Home">
 <meta property="og:description" content="1、从服务器下载文件12scp username@servername:/path/filename /tmp/local_destinationscp codinglog@192.168.0.101:/home/kimi/test.txt    把192.168.0.101上的/home/kimi/test.txt的文件下载到 /tmp/local_destination 2、上传本地文件到服务">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-16T13:22:31.000Z">
+<meta property="og:updated_time" content="2019-06-09T23:32:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用scp传输文件">
 <meta name="twitter:description" content="1、从服务器下载文件12scp username@servername:/path/filename /tmp/local_destinationscp codinglog@192.168.0.101:/home/kimi/test.txt    把192.168.0.101上的/home/kimi/test.txt的文件下载到 /tmp/local_destination 2、上传本地文件到服务">
@@ -315,7 +315,7 @@
 <h3 id="2、上传本地文件到服务器"><a href="#2、上传本地文件到服务器" class="headerlink" title="2、上传本地文件到服务器"></a>2、上传本地文件到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp /path/local_filename username@servername:/path  </span><br><span class="line">scp /var/www/test.php  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
 <p>   把本机/var/www/目录下的test.php文件<br>   上传到192.168.0.101这台服务器上的/var/www/目录中</p>
 <h3 id="3、从服务器下载整个目录"><a href="#3、从服务器下载整个目录" class="headerlink" title="3、从服务器下载整个目录"></a>3、从服务器下载整个目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r username@servername:remote_dir/ /tmp/local_dir </span><br><span class="line">scp -r codinglog@192.168.0.101 /home/kimi/test  /tmp/local_dir</span><br></pre></td></tr></table></figure>
-<h3 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp  -r /tmp/local_dir username@servername:remote_dir</span><br><span class="line">scp -r test  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
+<h3 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r /tmp/local_dir username@servername:remote_dir</span><br><span class="line">scp -r test  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
 <p>把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
 <h3 id="附：需要使用端口号时，要紧跟scp"><a href="#附：需要使用端口号时，要紧跟scp" class="headerlink" title="附：需要使用端口号时，要紧跟scp"></a>附：需要使用端口号时，要紧跟scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -P 8888  /path/local_filename username@servername:/path</span><br></pre></td></tr></table></figure>
       
@@ -498,7 +498,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

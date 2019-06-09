@@ -242,6 +242,125 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/10/redis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayding's Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/10/redis/" itemprop="url">redis</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-10T07:25:48+08:00">
+                2019-06-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/27/MySQL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -313,13 +432,21 @@
       
         
           
-            <h3 id="一条SQL查询语句是如何执行的？"><a href="#一条SQL查询语句是如何执行的？" class="headerlink" title="一条SQL查询语句是如何执行的？"></a>一条SQL查询语句是如何执行的？</h3><p>####初识MySQL：<br>1、MySQL可以分为Server层和存储引擎层两部分。如图：<br><img src="/images/self/mysql/mysql.png"></p>
+            <h3 id="Day1-一条SQL查询语句是如何执行的？"><a href="#Day1-一条SQL查询语句是如何执行的？" class="headerlink" title="Day1:一条SQL查询语句是如何执行的？"></a>Day1:一条SQL查询语句是如何执行的？</h3><h4 id="一、初识MySQL："><a href="#一、初识MySQL：" class="headerlink" title="一、初识MySQL："></a>一、初识MySQL：</h4><p>1、MySQL可以分为Server层和存储引擎层两部分。如图：<br><img src="/images/self/mysql/mysql.png"></p>
 <blockquote>
 <p>Server层：包括连接器、查询缓存、分析器、优化器、执行器等，涵盖 MySQL 的大多数核心服务功能，以及所有的内置函数（如日期、时间、数学和加密函数等），所有跨存储引擎的功能都在这一层实现，比如存储过程、触发器、视图等。   </p>
 </blockquote>
 <blockquote>
 <p>存储引擎层：负责数据的存储和提取。其架构模式是插件式的，支持InnoDB、MyISAM、Memory 等多个存储引擎。现在最常用的存储引擎是 InnoDB，它从 MySQL 5.5.5 版本开始成为了默认存储引擎。</p>
 </blockquote>
+<p>2、短连接与长连接   </p>
+<blockquote>
+<p>短连接：每次执行完很少的几次产讯后就断开连接，下次查询再重新建立新的连接</p>
+</blockquote>
+<blockquote>
+<p>长连接：连接成功后，如果有持续的请求，则一直使用同一个连接（客户端长时间没有请求，连接器会断开连接，由wait_timeout参数控制，默认为8小时）</p>
+</blockquote>
+<p>Tips：建立连接的过程比较复杂，建议使用长连接，但都使用长连接后，会有可能导致MySQL占用的内存迅速增大（断开连接时才会释放内存）。<br>1）程序判断执行过一个占用内存的大查询后，断开连接<br>2）MySQL5.7以上可以通过mysql_reset_connection 来重新初始化连接资源（不需要重连和权限验证）。</p>
 
           
         
@@ -716,596 +843,6 @@
 <p>鼠标相对于用户显示器屏幕左上角的X,Y坐标。<font color="#dd00dd">标准事件和IE事件都定义了这2个属性。</font>  </p>
 </blockquote>
 <p><img src="/images/self/坐标.png"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/MarkDown-代码高亮/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jayding">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jayding's Home">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/17/MarkDown-代码高亮/" itemprop="url">MarkDown 代码高亮</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T21:21:45+08:00">
-                2018-07-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。"><a href="#MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。" class="headerlink" title="MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。"></a>MarkDown编辑时，经常会引入代码，若代码能高亮显示，界面就会非常友好。</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```key</span></span><br><span class="line"><span class="code">	代码片段</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-<h4 id="各语言key值对应表"><a href="#各语言key值对应表" class="headerlink" title="各语言key值对应表"></a>各语言key值对应表</h4><table>
-<thead>
-<tr>
-<th>language</th>
-<th>key</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1C</td>
-<td>1c</td>
-</tr>
-<tr>
-<td>ActionScript</td>
-<td>actionscript</td>
-</tr>
-<tr>
-<td>Apache</td>
-<td>apache</td>
-</tr>
-<tr>
-<td>AppleScript</td>
-<td>applescript</td>
-</tr>
-<tr>
-<td>AsciiDoc</td>
-<td>asciidoc</td>
-</tr>
-<tr>
-<td>AspectJ</td>
-<td>asciidoc</td>
-</tr>
-<tr>
-<td>AutoHotkey</td>
-<td>autohotkey</td>
-</tr>
-<tr>
-<td>AVR Assembler</td>
-<td>avrasm</td>
-</tr>
-<tr>
-<td>Axapta</td>
-<td>axapta</td>
-</tr>
-<tr>
-<td>Bash</td>
-<td>bash</td>
-</tr>
-<tr>
-<td>BrainFuck</td>
-<td>brainfuck</td>
-</tr>
-<tr>
-<td>Cap’n Proto</td>
-<td>capnproto</td>
-</tr>
-<tr>
-<td>Clojure REPL</td>
-<td>clojure</td>
-</tr>
-<tr>
-<td>Clojure</td>
-<td>clojure</td>
-</tr>
-<tr>
-<td>CMake</td>
-<td>cmake</td>
-</tr>
-<tr>
-<td>CoffeeScript</td>
-<td>coffeescript</td>
-</tr>
-<tr>
-<td>C++</td>
-<td>cpp</td>
-</tr>
-<tr>
-<td>C#</td>
-<td>cs</td>
-</tr>
-<tr>
-<td>CSS</td>
-<td>css</td>
-</tr>
-<tr>
-<td>D</td>
-<td>d</td>
-</tr>
-<tr>
-<td>Dart</td>
-<td>d</td>
-</tr>
-<tr>
-<td>Delphi</td>
-<td>delphi</td>
-</tr>
-<tr>
-<td>Diff</td>
-<td>diff</td>
-</tr>
-<tr>
-<td>Django</td>
-<td>django</td>
-</tr>
-<tr>
-<td>DOS.bat</td>
-<td>dos</td>
-</tr>
-<tr>
-<td>Dust</td>
-<td>dust</td>
-</tr>
-<tr>
-<td>Elixir</td>
-<td>elixir</td>
-</tr>
-<tr>
-<td>ERB(Embedded Ruby)</td>
-<td>erb</td>
-</tr>
-<tr>
-<td>Erlang REPL</td>
-<td>erlang-repl</td>
-</tr>
-<tr>
-<td>Erlang</td>
-<td>erlang</td>
-</tr>
-<tr>
-<td>FIX</td>
-<td>fix</td>
-</tr>
-<tr>
-<td>F#</td>
-<td>fsharp</td>
-</tr>
-<tr>
-<td>G-code(ISO 6983)</td>
-<td>gcode</td>
-</tr>
-<tr>
-<td>Gherkin</td>
-<td>gherkin</td>
-</tr>
-<tr>
-<td>GLSL</td>
-<td>glsl</td>
-</tr>
-<tr>
-<td>Go</td>
-<td>go</td>
-</tr>
-<tr>
-<td>Gradle</td>
-<td>gradle</td>
-</tr>
-<tr>
-<td>Groovy</td>
-<td>groovy</td>
-</tr>
-<tr>
-<td>Haml</td>
-<td>haml</td>
-</tr>
-<tr>
-<td>Handlebars</td>
-<td>handlebars</td>
-</tr>
-<tr>
-<td>Haskell</td>
-<td>haskell</td>
-</tr>
-<tr>
-<td>Haxe</td>
-<td>haxe</td>
-</tr>
-<tr>
-<td>HTML</td>
-<td>html</td>
-</tr>
-<tr>
-<td>HTTP</td>
-<td>http</td>
-</tr>
-<tr>
-<td>Ini file</td>
-<td>ini</td>
-</tr>
-<tr>
-<td>Java</td>
-<td>java</td>
-</tr>
-<tr>
-<td>JavaScript</td>
-<td>javascript</td>
-</tr>
-<tr>
-<td>JSON</td>
-<td>json</td>
-</tr>
-<tr>
-<td>Lasso</td>
-<td>lasso</td>
-</tr>
-<tr>
-<td>Less</td>
-<td>less</td>
-</tr>
-<tr>
-<td>Lisp</td>
-<td>lisp</td>
-</tr>
-<tr>
-<td>LiveCode</td>
-<td>livecodeserver</td>
-</tr>
-<tr>
-<td>LiveScript</td>
-<td>livescript</td>
-</tr>
-<tr>
-<td>Lua</td>
-<td>lua</td>
-</tr>
-<tr>
-<td>Makefile</td>
-<td>makefile</td>
-</tr>
-<tr>
-<td>Markdown</td>
-<td>markdown</td>
-</tr>
-<tr>
-<td>Mathematica</td>
-<td>mathematica</td>
-</tr>
-<tr>
-<td>Matlab</td>
-<td>matlab</td>
-</tr>
-<tr>
-<td>MEL (Maya Embedded Language)</td>
-<td>mel</td>
-</tr>
-<tr>
-<td>Mercury</td>
-<td>mercury</td>
-</tr>
-<tr>
-<td>Mizar</td>
-<td>mizar</td>
-</tr>
-<tr>
-<td>Monkey</td>
-<td>monkey</td>
-</tr>
-<tr>
-<td>Nginx</td>
-<td>nginx</td>
-</tr>
-<tr>
-<td>Nimrod</td>
-<td>nimrod</td>
-</tr>
-<tr>
-<td>Nix</td>
-<td>nix</td>
-</tr>
-<tr>
-<td>NSIS</td>
-<td>nsis</td>
-</tr>
-<tr>
-<td>ObjectiveC</td>
-<td>objectivec</td>
-</tr>
-<tr>
-<td>OCaml</td>
-<td>ocaml</td>
-</tr>
-<tr>
-<td>Oxygene</td>
-<td>oxygene</td>
-</tr>
-<tr>
-<td>Parser 3</td>
-<td>parser3</td>
-</tr>
-<tr>
-<td>Perl</td>
-<td>perl</td>
-</tr>
-<tr>
-<td>PHP</td>
-<td>php</td>
-</tr>
-<tr>
-<td>PowerShell</td>
-<td>powershell</td>
-</tr>
-<tr>
-<td>Processing</td>
-<td>processing</td>
-</tr>
-<tr>
-<td>Python’s profiler</td>
-<td>output    profile</td>
-</tr>
-<tr>
-<td>Protocol Buffers</td>
-<td>protobuf</td>
-</tr>
-<tr>
-<td>Puppet</td>
-<td>puppet</td>
-</tr>
-<tr>
-<td>Python</td>
-<td>python</td>
-</tr>
-<tr>
-<td>Q</td>
-<td>q</td>
-</tr>
-<tr>
-<td>R</td>
-<td>r</td>
-</tr>
-<tr>
-<td>RenderMan RIB</td>
-<td>rib</td>
-</tr>
-<tr>
-<td>Roboconf</td>
-<td>roboconf</td>
-</tr>
-<tr>
-<td>RenderMan RSL</td>
-<td>rsl</td>
-</tr>
-<tr>
-<td>Ruby</td>
-<td>ruby</td>
-</tr>
-<tr>
-<td>Oracle Rules Language</td>
-<td>ruleslanguage</td>
-</tr>
-<tr>
-<td>Rust</td>
-<td>rust</td>
-</tr>
-<tr>
-<td>Scala</td>
-<td>scala</td>
-</tr>
-<tr>
-<td>Scheme</td>
-<td>scheme</td>
-</tr>
-<tr>
-<td>Scilab</td>
-<td>scilab</td>
-</tr>
-<tr>
-<td>SCSS</td>
-<td>scss</td>
-</tr>
-<tr>
-<td>Smali</td>
-<td>smali</td>
-</tr>
-<tr>
-<td>SmallTalk</td>
-<td>smalltalk</td>
-</tr>
-<tr>
-<td>SML</td>
-<td>sml</td>
-</tr>
-<tr>
-<td>SQL</td>
-<td>sql</td>
-</tr>
-<tr>
-<td>Stata</td>
-<td>stata</td>
-</tr>
-<tr>
-<td>STEP Part21(ISO 10303-21)</td>
-<td>step21</td>
-</tr>
-<tr>
-<td>Stylus</td>
-<td>stylus</td>
-</tr>
-<tr>
-<td>Swift</td>
-<td>swift</td>
-</tr>
-<tr>
-<td>Tcl</td>
-<td>tcl</td>
-</tr>
-<tr>
-<td>Tex</td>
-<td>tex</td>
-</tr>
-<tr>
-<td>text</td>
-<td>text/plain</td>
-</tr>
-<tr>
-<td>Thrift</td>
-<td>thrift</td>
-</tr>
-<tr>
-<td>Twig</td>
-<td>twig</td>
-</tr>
-<tr>
-<td>TypeScript</td>
-<td>typescript</td>
-</tr>
-<tr>
-<td>Vala</td>
-<td>vala</td>
-</tr>
-<tr>
-<td>VB.NET</td>
-<td>vbnet</td>
-</tr>
-<tr>
-<td>VBScript in HTML</td>
-<td>vbscript-html</td>
-</tr>
-<tr>
-<td>VBScript</td>
-<td>vbscript</td>
-</tr>
-<tr>
-<td>Verilog</td>
-<td>verilog</td>
-</tr>
-<tr>
-<td>VHDL</td>
-<td>vhdl</td>
-</tr>
-<tr>
-<td>Vim Script</td>
-<td>vim</td>
-</tr>
-<tr>
-<td>Intel x86 Assembly</td>
-<td>x86asm</td>
-</tr>
-<tr>
-<td>XL</td>
-<td>xl</td>
-</tr>
-<tr>
-<td>XML</td>
-<td>xml</td>
-</tr>
-<tr>
-<td>YAML</td>
-<td>yml</td>
-</tr>
-</tbody>
-</table>
 
           
         
@@ -1920,7 +1457,7 @@
 <h3 id="2、上传本地文件到服务器"><a href="#2、上传本地文件到服务器" class="headerlink" title="2、上传本地文件到服务器"></a>2、上传本地文件到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp /path/local_filename username@servername:/path  </span><br><span class="line">scp /var/www/test.php  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
 <p>   把本机/var/www/目录下的test.php文件<br>   上传到192.168.0.101这台服务器上的/var/www/目录中</p>
 <h3 id="3、从服务器下载整个目录"><a href="#3、从服务器下载整个目录" class="headerlink" title="3、从服务器下载整个目录"></a>3、从服务器下载整个目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r username@servername:remote_dir/ /tmp/local_dir </span><br><span class="line">scp -r codinglog@192.168.0.101 /home/kimi/test  /tmp/local_dir</span><br></pre></td></tr></table></figure>
-<h3 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp  -r /tmp/local_dir username@servername:remote_dir</span><br><span class="line">scp -r test  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
+<h3 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r /tmp/local_dir username@servername:remote_dir</span><br><span class="line">scp -r test  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
 <p>把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
 <h3 id="附：需要使用端口号时，要紧跟scp"><a href="#附：需要使用端口号时，要紧跟scp" class="headerlink" title="附：需要使用端口号时，要紧跟scp"></a>附：需要使用端口号时，要紧跟scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -P 8888  /path/local_filename username@servername:/path</span><br></pre></td></tr></table></figure>
           
@@ -2053,7 +1590,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
