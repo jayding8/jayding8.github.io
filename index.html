@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/10/redis/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/10/redis学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jayding">
@@ -261,7 +261,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/10/redis/" itemprop="url">redis</a></h1>
+                <a class="post-title-link" href="/2019/06/10/redis学习笔记/" itemprop="url">redis</a></h1>
         
 
         <div class="post-meta">
@@ -313,13 +313,23 @@
       
         
           
-            <h3 id="redis基础"><a href="#redis基础" class="headerlink" title="redis基础"></a>redis基础</h3><p>1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）<br>2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：  </p>
+            <h3 id="一、redis基础"><a href="#一、redis基础" class="headerlink" title="一、redis基础"></a>一、redis基础</h3><p>1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）   </p>
+<p>2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：  </p>
 <pre><code>* 字符串   
 * 散列   
 * 列表   
 * 集合   
 * 有序集合   
-</code></pre>
+</code></pre><p>3、内存存储（即所有数据存储在内存中）与持久化（程序退出后，数据异步写入硬盘）    </p>
+<h3 id="二、redis安装启动"><a href="#二、redis安装启动" class="headerlink" title="二、redis安装启动"></a>二、redis安装启动</h3><p>1、brew安装</p>
+<blockquote>
+<p>brew install redis    </p>
+</blockquote>
+<p>2、常用服务redis-server（服务器）和redis-cli（命令行客户端）<br>    2.1 启动redis</p>
+<pre><code>+ 直接启动：redis-server        默认使用6379端口   
++ 加端口号：redis-server --port 6666   
+</code></pre><p>3、</p>
+
           
         
       

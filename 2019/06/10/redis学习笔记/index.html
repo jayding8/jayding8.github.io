@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="redis基础1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：   * 字符串    * 散列    * 列表    * 集合    * 有序集合">
+<meta name="description" content="一、redis基础1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）    2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：   * 字符串    * 散列    * 列表    * 集合    * 有序集合    3、内存存储（即所有数据存储在内存中）与持久化（程序退出后，数据异步写入硬盘）">
 <meta name="keywords" content="redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis">
-<meta property="og:url" content="http://yoursite.com/2019/06/10/redis/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/06/10/redis学习笔记/index.html">
 <meta property="og:site_name" content="Jayding&#39;s Home">
-<meta property="og:description" content="redis基础1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：   * 字符串    * 散列    * 列表    * 集合    * 有序集合">
+<meta property="og:description" content="一、redis基础1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）    2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：   * 字符串    * 散列    * 列表    * 集合    * 有序集合    3、内存存储（即所有数据存储在内存中）与持久化（程序退出后，数据异步写入硬盘）">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-09T23:52:52.000Z">
+<meta property="og:updated_time" content="2019-06-10T00:10:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis">
-<meta name="twitter:description" content="redis基础1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：   * 字符串    * 散列    * 列表    * 集合    * 有序集合">
+<meta name="twitter:description" content="一、redis基础1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）    2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：   * 字符串    * 散列    * 列表    * 集合    * 有序集合    3、内存存储（即所有数据存储在内存中）与持久化（程序退出后，数据异步写入硬盘）">
 
 
 
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/06/10/redis/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/06/10/redis学习笔记/"/>
 
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/10/redis/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/10/redis学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jayding">
@@ -310,13 +310,23 @@
       
 
       
-        <h3 id="redis基础"><a href="#redis基础" class="headerlink" title="redis基础"></a>redis基础</h3><p>1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）<br>2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：  </p>
+        <h3 id="一、redis基础"><a href="#一、redis基础" class="headerlink" title="一、redis基础"></a>一、redis基础</h3><p>1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）   </p>
+<p>2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：  </p>
 <pre><code>* 字符串   
 * 散列   
 * 列表   
 * 集合   
 * 有序集合   
-</code></pre>
+</code></pre><p>3、内存存储（即所有数据存储在内存中）与持久化（程序退出后，数据异步写入硬盘）    </p>
+<h3 id="二、redis安装启动"><a href="#二、redis安装启动" class="headerlink" title="二、redis安装启动"></a>二、redis安装启动</h3><p>1、brew安装</p>
+<blockquote>
+<p>brew install redis    </p>
+</blockquote>
+<p>2、常用服务redis-server（服务器）和redis-cli（命令行客户端）<br>    2.1 启动redis</p>
+<pre><code>+ 直接启动：redis-server        默认使用6379端口   
++ 加端口号：redis-server --port 6666   
+</code></pre><p>3、</p>
+
       
     </div>
     
@@ -477,7 +487,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#redis基础"><span class="nav-number">1.</span> <span class="nav-text">redis基础</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、redis基础"><span class="nav-number">1.</span> <span class="nav-text">一、redis基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、redis安装启动"><span class="nav-number">2.</span> <span class="nav-text">二、redis安装启动</span></a></li></ol></div>
             
 
           </div>
