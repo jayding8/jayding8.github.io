@@ -328,10 +328,13 @@
 <p>brew install redis    </p>
 </blockquote>
 <p>2、常用服务redis-server（服务器）和redis-cli（命令行客户端）<br>　<em>2.1 启动redis</em>      </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">直接启动：redis-server		默认使用6379端口      </span><br><span class="line">加端口号：redis-server --port 6666      </span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">　*2.2 停止redis*</span><br></pre></td></tr></table></figure>
-<p>redis-cli shutdown   先断开客户端连接，在执行持久化，最后退出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">　*2.3 redis-cli使用方式*</span><br></pre></td></tr></table></figure></p>
-<p>redis-cli -h 127.0.0.1 -p 6379   回车进入交互模式，在执行命令<br>redis-cli -p 6379 ping           命令当参数执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">　*2.4 配置*</span><br></pre></td></tr></table></figure></p>
-<p>　redis-server /data/redis.conf<br>　　启动时把配置文件路径作为参数<br>　redis-server /data/redis.conf –loglevel warning<br>　　启动参数中的配置参数会覆盖配置文件中的同名参数<br>　config set loglevel<br>　　部分参数可以通过config set在不重新启动redis的情况下动态修改<br>　<br><code>`</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">直接启动：redis-server		默认使用6379端口      </span><br><span class="line">加端口号：redis-server --port 6666</span><br></pre></td></tr></table></figure>
+<p>　<em>2.2 停止redis</em>   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli shutdown   先断开客户端连接，在执行持久化，最后退出</span><br></pre></td></tr></table></figure>
+<p>　<em>2.3 redis-cli使用方式</em>   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h 127.0.0.1 -p 6379   回车进入交互模式，在执行命令</span><br><span class="line">redis-cli -p 6379 ping           命令当参数执行</span><br></pre></td></tr></table></figure>
+<p>　<em>2.4 配置</em>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">　redis-server /data/redis.conf    </span><br><span class="line">　　启动时把配置文件路径作为参数   </span><br><span class="line">　redis-server /data/redis.conf --loglevel warning</span><br><span class="line">　　启动参数中的配置参数会覆盖配置文件中的同名参数</span><br><span class="line">　config set loglevel</span><br><span class="line">　　部分参数可以通过config set在不重新启动redis的情况下动态修改</span><br></pre></td></tr></table></figure>
 
           
         
