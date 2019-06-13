@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jayding&#39;s Home">
 <meta property="og:description" content="一、redis基础1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）    2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：    字符串（string）    散列（hash）    列表（list）    集合（set）    有序集合（zset）     3、内存存储（即所有数据存储在内存中">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-12T00:00:41.000Z">
+<meta property="og:updated_time" content="2019-06-13T00:07:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis">
 <meta name="twitter:description" content="一、redis基础1、redis是开源的、高性能的、基于键值对的缓存与存储系统（可用于消息队列、任务队列等）    2、redis是REmote Dictionary Server（远程字典服务）的缩写，目前支持的数据类型为：    字符串（string）    散列（hash）    列表（list）    集合（set）    有序集合（zset）     3、内存存储（即所有数据存储在内存中">
@@ -332,6 +332,20 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h 127.0.0.1 -p 6379   回车进入交互模式，在执行命令</span><br><span class="line">redis-cli -p 6379 ping           命令当参数执行</span><br></pre></td></tr></table></figure>
 <p>　<em>2.4 配置</em>  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">　redis-server /data/redis.conf    </span><br><span class="line">　　启动时把配置文件路径作为参数   </span><br><span class="line">　redis-server /data/redis.conf --loglevel warning</span><br><span class="line">　　启动参数中的配置参数会覆盖配置文件中的同名参数</span><br><span class="line">　config set loglevel</span><br><span class="line">　　部分参数可以通过config set在不重新启动redis的情况下动态修改</span><br></pre></td></tr></table></figure>
+<h3 id="三、数据类型详解"><a href="#三、数据类型详解" class="headerlink" title="三、数据类型详解"></a>三、数据类型详解</h3><p>1、字符串类型（string）<br>　<em>1.1 介绍</em>  </p>
+<ul>
+<li>字符串类型是redis最基础的数据类型，可以存储任何形式的字符串，包括二进制数据</li>
+<li>一个字符串类型键允许存储的数据最大容量为512MB</li>
+<li>其他数据类型某种角度来说只是组织字符串的角度不同而已</li>
+</ul>
+<p>　<em>1.2 命令</em><br>　　<em>1.2.1 赋值:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set key value		</span><br><span class="line">eg: set user:1:name jayding</span><br></pre></td></tr></table></figure>
+<p>　　<em>1.2.2 取值:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get key			</span><br><span class="line">eg: get user:1:name</span><br></pre></td></tr></table></figure>
+<p>　　<em>1.2.3 自增1:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">incr key(只适用于数字，其他类型会报错) </span><br><span class="line">eg: incr user:1:age</span><br></pre></td></tr></table></figure>
+<p>　　<em>1.2.4 增加指定整数:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">incrby key increment(increment指定一次增加的数值) </span><br><span class="line">eg: incrby user:1:age 3</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -493,7 +507,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、redis基础"><span class="nav-number">1.</span> <span class="nav-text">一、redis基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、redis安装启动配置"><span class="nav-number">2.</span> <span class="nav-text">二、redis安装启动配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、redis基础"><span class="nav-number">1.</span> <span class="nav-text">一、redis基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、redis安装启动配置"><span class="nav-number">2.</span> <span class="nav-text">二、redis安装启动配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、数据类型详解"><span class="nav-number">3.</span> <span class="nav-text">三、数据类型详解</span></a></li></ol></div>
             
 
           </div>
