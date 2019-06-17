@@ -339,16 +339,32 @@
 <ul>
 <li>字符串类型是redis最基础的数据类型，可以存储任何形式的字符串，包括二进制数据</li>
 <li>一个字符串类型键允许存储的数据最大容量为512MB</li>
-<li>其他数据类型某种角度来说只是组织字符串的角度不同而已</li>
+<li>其他数据类型某种角度来说只是组织字符串的形式不同而已</li>
 </ul>
 <p>　<em>1.2 命令</em><br>　　<em>1.2.1 赋值:</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set key value		</span><br><span class="line">eg: set user:1:name jayding</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set key value		单个   </span><br><span class="line">eg: set user:1:name jayding   </span><br><span class="line">mset key1 value1 key2 value2	多个   </span><br><span class="line">eg：mset user:1:name jayding user:2:name fafa user:3:name gg</span><br></pre></td></tr></table></figure>
 <p>　　<em>1.2.2 取值:</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get key			</span><br><span class="line">eg: get user:1:name</span><br></pre></td></tr></table></figure>
-<p>　　<em>1.2.3 自增1:</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">incr key(只适用于数字，其他类型会报错) </span><br><span class="line">eg: incr user:1:age</span><br></pre></td></tr></table></figure>
-<p>　　<em>1.2.4 增加指定整数:</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">incrby key increment(increment指定一次增加的数值) </span><br><span class="line">eg: incrby user:1:age 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">get key	单个   			</span><br><span class="line">eg: get user:1:name   </span><br><span class="line">mget key1 key2	多个   </span><br><span class="line">eg：mget user:1:name user:2:name</span><br></pre></td></tr></table></figure>
+<p>　　<em>1.2.3 自增/自减1:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">incr/decr key(只适用于数字，其他类型会报错) </span><br><span class="line">eg: incr/decr user:1:age</span><br></pre></td></tr></table></figure>
+<p>　　<em>1.2.4 增加/减少指定整数:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">incrby/decrby key increment(increment指定一次增加的数值) </span><br><span class="line">eg: incrby/decrby user:1:age 3</span><br></pre></td></tr></table></figure>
+<p>　　<em>1.2.5 增加指定浮点数:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">incrbyfloat key increment(increment指定一次增加的数值) </span><br><span class="line">eg: incrbyfloat user:1:age 2.5</span><br></pre></td></tr></table></figure>
+<p>　　<em>1.2.6 向尾部追加值:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">append key str </span><br><span class="line">eg: append user:1:name &quot; is so handsome！&quot;</span><br></pre></td></tr></table></figure>
+<p>　　<em>1.2.7 获取字符串长度:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">strlen key </span><br><span class="line">eg: strlen user:1:name</span><br></pre></td></tr></table></figure>
+<p>2、散列类型（hash）<br>　<em>2.1 介绍</em>  </p>
+<ul>
+<li>散列类型的键值也是字典结构</li>
+<li>散列类型存储了字段和字段值的映射，但字段只能是字符串</li>
+<li>一个散列类型键最多可以包含2^32-1个字段</li>
+</ul>
+<p>　<em>2.2 命令</em><br>　　<em>2.2.1 赋值:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hset key field value		单个   </span><br><span class="line">eg: hset user name jayding   </span><br><span class="line">hmset key field1 value1 field2 value2	多个   </span><br><span class="line">eg：hmset user name jayding age 18 sex gg</span><br></pre></td></tr></table></figure>
+<p>　　<em>2.2.2 取值:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hget key field	单个      			</span><br><span class="line">eg: hget user name     </span><br><span class="line">hmget key field1 field2		多个      </span><br><span class="line">eg：hmget user name age    </span><br><span class="line">hgetall key	获取所有</span><br><span class="line">eg：hgetall user</span><br></pre></td></tr></table></figure>
 
           
         
