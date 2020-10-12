@@ -81,14 +81,13 @@
 
 <meta name="description" content="所有的努力和坚持都是因为不甘心！！！">
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:title" content="Jayding&#39;s Home">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Jayding&#39;s Home">
 <meta property="og:description" content="所有的努力和坚持都是因为不甘心！！！">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-17T06:04:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="Jayding&#39;s Home">
 <meta name="twitter:description" content="所有的努力和坚持都是因为不甘心！！！">
 
 
@@ -119,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
 
 
 
 
 
-  <title>tags | Jayding's Home</title>
+  <title>Jayding's Home</title>
   
 
 
@@ -144,7 +143,8 @@
     
   
 
-  <div class="container sidebar-position-right page-post-detail">
+  <div class="container sidebar-position-right 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -227,44 +227,141 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div id="posts" class="posts-expand">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/Scp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayding's Home">
+    </span>
+
     
-    
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                8 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Linux/" style="font-size: 12px; color: #ccc">Linux</a> <a href="/tags/MySQL/" style="font-size: 12px; color: #ccc">MySQL</a> <a href="/tags/js/" style="font-size: 21px; color: #6f6f6f">js</a> <a href="/tags/php/" style="font-size: 12px; color: #ccc">php</a> <a href="/tags/redis/" style="font-size: 12px; color: #ccc">redis</a> <a href="/tags/前端/" style="font-size: 21px; color: #6f6f6f">前端</a> <a href="/tags/学习笔记/" style="font-size: 12px; color: #ccc">学习笔记</a> <a href="/tags/终端命令/" style="font-size: 30px; color: #111">终端命令</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/16/Scp/" itemprop="url">利用scp传输文件</a></h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T17:38:25+08:00">
+                2018-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        
+          
+            <h3 id="1、从服务器下载文件"><a href="#1、从服务器下载文件" class="headerlink" title="1、从服务器下载文件"></a>1、从服务器下载文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp username@servername:/path/filename /tmp/local_destination</span><br><span class="line">scp codinglog@192.168.0.101:/home/kimi/test.txt</span><br></pre></td></tr></table></figure>
+<p>   把192.168.0.101上的/home/kimi/test.txt的文件下载到 /tmp/local_destination</p>
+<h3 id="2、上传本地文件到服务器"><a href="#2、上传本地文件到服务器" class="headerlink" title="2、上传本地文件到服务器"></a>2、上传本地文件到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp /path/local_filename username@servername:/path  </span><br><span class="line">scp /var/www/test.php  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
+<p>   把本机/var/www/目录下的test.php文件<br>   上传到192.168.0.101这台服务器上的/var/www/目录中</p>
+<h3 id="3、从服务器下载整个目录"><a href="#3、从服务器下载整个目录" class="headerlink" title="3、从服务器下载整个目录"></a>3、从服务器下载整个目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r username@servername:remote_dir/ /tmp/local_dir </span><br><span class="line">scp -r codinglog@192.168.0.101 /home/kimi/test  /tmp/local_dir</span><br></pre></td></tr></table></figure>
+<h3 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r /tmp/local_dir username@servername:remote_dir</span><br><span class="line">scp -r test  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
+<p>把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
+<h3 id="附：需要使用端口号时，要紧跟scp"><a href="#附：需要使用端口号时，要紧跟scp" class="headerlink" title="附：需要使用端口号时，要紧跟scp"></a>附：需要使用端口号时，要紧跟scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -P 8888  /path/local_filename username@servername:/path</span><br></pre></td></tr></table></figure>
+          
+        
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -484,10 +581,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 

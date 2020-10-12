@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="新机折腾贪便宜买一了台ucloud服务器，1核2G 2M带宽，系统盘40G 一、服务器配置调整 修改服务器名字  1hostnamectl set-hostname xxx  安装rz、sz  1yum install lrzsz.x86_64 (yum search后，复制包名直接install)  新增用户  12useradd jayding   新增用户名为jayding的用户passwd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jayding&#39;s Home">
+<meta property="og:url" content="http://yoursite.com/2020/09/30/新机折腾/index.html">
+<meta property="og:site_name" content="Jayding&#39;s Home">
+<meta property="og:description" content="新机折腾贪便宜买一了台ucloud服务器，1核2G 2M带宽，系统盘40G 一、服务器配置调整 修改服务器名字  1hostnamectl set-hostname xxx  安装rz、sz  1yum install lrzsz.x86_64 (yum search后，复制包名直接install)  新增用户  12useradd jayding   新增用户名为jayding的用户passwd">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-10-12T12:39:24.553Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jayding&#39;s Home">
+<meta name="twitter:description" content="新机折腾贪便宜买一了台ucloud服务器，1核2G 2M带宽，系统盘40G 一、服务器配置调整 修改服务器名字  1hostnamectl set-hostname xxx  安装rz、sz  1yum install lrzsz.x86_64 (yum search后，复制包名直接install)  新增用户  12useradd jayding   新增用户名为jayding的用户passwd">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/09/30/新机折腾/"/>
+
+
+
+
+
+  <title> | Jayding's Home</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jayding's Home</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/30/新机折腾/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayding's Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-30T18:09:30+08:00">
+                2020-09-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="新机折腾"><a href="#新机折腾" class="headerlink" title="新机折腾"></a>新机折腾</h2><p><strong>贪便宜买一了台ucloud服务器，1核2G 2M带宽，系统盘40G</strong></p>
+<h3 id="一、服务器配置调整"><a href="#一、服务器配置调整" class="headerlink" title="一、服务器配置调整"></a>一、服务器配置调整</h3><ul>
+<li>修改服务器名字</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname xxx</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装rz、sz</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install lrzsz.x86_64 (yum search后，复制包名直接install)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>新增用户</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd jayding   新增用户名为jayding的用户</span><br><span class="line">passwd jayding    添加jayding用户的账号密码</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br>1、默认会在<code>/home</code>下创建一个用户同名的文件夹<br>2、<a href="https://www.runoob.com/linux/linux-user-manage.html" target="_blank" rel="noopener">点击查看相关命令</a></p>
+</blockquote>
+<ul>
+<li>普通用户增加sudo权限</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sudoers 或 vim /etc/sudoers.d/90-cloud-init-users </span><br><span class="line">添加 jayding ALL=(ALL) ALL</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br><code>/etc/sudoers</code>中<code>#includedir /etc/sudoers.d</code>前面的<code>#</code>不是注释的意思，不能去掉</p>
+</blockquote>
+<ul>
+<li>关闭ssh默认的root登录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line">PermitRootLogin no   默认为注释或者yes</span><br><span class="line">service sshd restart 或 systemctl restart sshd   重启sshd</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改ssh登录端口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config   </span><br><span class="line">Port 1212   默认为22</span><br><span class="line">systemctl restart sshd   重启sshd</span><br><span class="line">firewall-cmd --list-ports   查看防火墙已开端口</span><br><span class="line">firewall-cmd --zone=public --add-port=1212/tcp --permanent   开放防火墙端口</span><br><span class="line">firewall-cmd --reload 或 systemctl restart firewalld.service   重启防火墙</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --remove-port=1213/tcp --permanent 关闭已开放端口</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br>用的ucloud，需要在<code>网络基础</code>=&gt;<code>外网防火墙</code> 中创建防火墙规则，或在已有规则下添加新开放端口，否则公网无法访问<br>如果是新建规则，需要在<code>云主机</code>=&gt;<code>...</code>=&gt;<code>关联产品操作</code>=&gt;<code>修改外网防火墙</code>中选择新建的规则</p>
+</blockquote>
+<h3 id="二、安装php环境"><a href="#二、安装php环境" class="headerlink" title="二、安装php环境"></a>二、安装php环境</h3><ul>
+<li>nginx   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum info nginx 查看默认版本</span><br><span class="line">yum install nginx</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br>1、根据自己的需求调整<code>/etc/nginx/nginx.conf</code>中配置<br>2、<a href="https://www.runoob.com/linux/linux-yum.html" target="_blank" rel="noopener">点击查看更多yum命令</a></p>
+</blockquote>
+<ul>
+<li>php</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">yum install php</span><br><span class="line">yum search php*json</span><br><span class="line">yum install php-json.x86_64   (默认没有json扩展，composer无法安装)</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">&gt; Ps:   </span><br><span class="line">&gt; 1、调整php-fpm配置，`/etc/php-fpm.d/www.conf`中`listen`由端口监听改为sock监听(需要和nginx中php配置保持一致，否则502)    </span><br><span class="line">&gt; 2、自主修改`/etc/php.ini` </span><br><span class="line"></span><br><span class="line">* composer</span><br></pre></td></tr></table></figure>
+<p>php -r “copy(‘<a href="https://install.phpcomposer.com/installer&#39;" target="_blank" rel="noopener">https://install.phpcomposer.com/installer&#39;</a>, ‘composer-setup.php’);”   下载安装脚本 － composer-setup.php － 到当前目录。<br>php composer-setup.php   执行安装过程。<br>php -r “unlink(‘composer-setup.php’);”   删除安装脚本。<br>mv composer.phar /usr/local/bin/composer   全局安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; Ps: [点击查看更多composer安装信息](https://pkg.phpcomposer.com/#how-to-install-composer)</span><br><span class="line"></span><br><span class="line">* mysql</span><br><span class="line"></span><br><span class="line">### 三、前端环境部署</span><br><span class="line"></span><br><span class="line">* nvm</span><br></pre></td></tr></table></figure></p>
+<p>wget -qO- <a href="https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh</a> | bash<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; Ps:   </span><br><span class="line">&gt; 1、[点击查看更多nvm安装信息](https://github.com/nvm-sh/nvm)   </span><br><span class="line">&gt; 2、nvm会一起安装node和npm</span><br><span class="line"></span><br><span class="line">* cnpm</span><br></pre></td></tr></table></figure></p>
+<p>npm install cnpm -g –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">### 四、线上项目git部署</span><br><span class="line"></span><br><span class="line">* git安装</span><br></pre></td></tr></table></figure></p>
+<p>yum install git (我是系统默认安装了)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 生成ssh秘钥</span><br></pre></td></tr></table></figure></p>
+<p>ssh-keygen -t rsa -C ”你的邮箱“  // 也可以不填邮箱<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 工程部署</span><br></pre></td></tr></table></figure></p>
+<p>git clone “项目地址”<br><code>`</code></p>
+<blockquote>
+<p>Ps:<br>1、域名不要直接指向git目录，有暴露git信息的风险<br>2、前端vue，后端laravel，项目打包更新都是通过shell脚本执行的</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/10/redis学习笔记/" rel="next" title="redis">
+                <i class="fa fa-chevron-left"></i> redis
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jayding</p>
+              <p class="site-description motion-element" itemprop="description">所有的努力和坚持都是因为不甘心！！！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新机折腾"><span class="nav-number">1.</span> <span class="nav-text">新机折腾</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、服务器配置调整"><span class="nav-number">1.1.</span> <span class="nav-text">一、服务器配置调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、安装php环境"><span class="nav-number">1.2.</span> <span class="nav-text">二、安装php环境</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jayding</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

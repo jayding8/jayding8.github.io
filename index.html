@@ -242,6 +242,179 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/30/新机折腾/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jayding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jayding's Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/30/新机折腾/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-30T18:09:30+08:00">
+                2020-09-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="新机折腾"><a href="#新机折腾" class="headerlink" title="新机折腾"></a>新机折腾</h2><p><strong>贪便宜买一了台ucloud服务器，1核2G 2M带宽，系统盘40G</strong></p>
+<h3 id="一、服务器配置调整"><a href="#一、服务器配置调整" class="headerlink" title="一、服务器配置调整"></a>一、服务器配置调整</h3><ul>
+<li>修改服务器名字</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname xxx</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装rz、sz</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install lrzsz.x86_64 (yum search后，复制包名直接install)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>新增用户</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd jayding   新增用户名为jayding的用户</span><br><span class="line">passwd jayding    添加jayding用户的账号密码</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br>1、默认会在<code>/home</code>下创建一个用户同名的文件夹<br>2、<a href="https://www.runoob.com/linux/linux-user-manage.html" target="_blank" rel="noopener">点击查看相关命令</a></p>
+</blockquote>
+<ul>
+<li>普通用户增加sudo权限</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sudoers 或 vim /etc/sudoers.d/90-cloud-init-users </span><br><span class="line">添加 jayding ALL=(ALL) ALL</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br><code>/etc/sudoers</code>中<code>#includedir /etc/sudoers.d</code>前面的<code>#</code>不是注释的意思，不能去掉</p>
+</blockquote>
+<ul>
+<li>关闭ssh默认的root登录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line">PermitRootLogin no   默认为注释或者yes</span><br><span class="line">service sshd restart 或 systemctl restart sshd   重启sshd</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改ssh登录端口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config   </span><br><span class="line">Port 1212   默认为22</span><br><span class="line">systemctl restart sshd   重启sshd</span><br><span class="line">firewall-cmd --list-ports   查看防火墙已开端口</span><br><span class="line">firewall-cmd --zone=public --add-port=1212/tcp --permanent   开放防火墙端口</span><br><span class="line">firewall-cmd --reload 或 systemctl restart firewalld.service   重启防火墙</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --remove-port=1213/tcp --permanent 关闭已开放端口</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br>用的ucloud，需要在<code>网络基础</code>=&gt;<code>外网防火墙</code> 中创建防火墙规则，或在已有规则下添加新开放端口，否则公网无法访问<br>如果是新建规则，需要在<code>云主机</code>=&gt;<code>...</code>=&gt;<code>关联产品操作</code>=&gt;<code>修改外网防火墙</code>中选择新建的规则</p>
+</blockquote>
+<h3 id="二、安装php环境"><a href="#二、安装php环境" class="headerlink" title="二、安装php环境"></a>二、安装php环境</h3><ul>
+<li>nginx   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum info nginx 查看默认版本</span><br><span class="line">yum install nginx</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br>1、根据自己的需求调整<code>/etc/nginx/nginx.conf</code>中配置<br>2、<a href="https://www.runoob.com/linux/linux-yum.html" target="_blank" rel="noopener">点击查看更多yum命令</a></p>
+</blockquote>
+<ul>
+<li>php</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">yum install php</span><br><span class="line">yum search php*json</span><br><span class="line">yum install php-json.x86_64   (默认没有json扩展，composer无法安装)</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">&gt; Ps:   </span><br><span class="line">&gt; 1、调整php-fpm配置，`/etc/php-fpm.d/www.conf`中`listen`由端口监听改为sock监听(需要和nginx中php配置保持一致，否则502)    </span><br><span class="line">&gt; 2、自主修改`/etc/php.ini` </span><br><span class="line"></span><br><span class="line">* composer</span><br></pre></td></tr></table></figure>
+<p>php -r “copy(‘<a href="https://install.phpcomposer.com/installer&#39;" target="_blank" rel="noopener">https://install.phpcomposer.com/installer&#39;</a>, ‘composer-setup.php’);”   下载安装脚本 － composer-setup.php － 到当前目录。<br>php composer-setup.php   执行安装过程。<br>php -r “unlink(‘composer-setup.php’);”   删除安装脚本。<br>mv composer.phar /usr/local/bin/composer   全局安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; Ps: [点击查看更多composer安装信息](https://pkg.phpcomposer.com/#how-to-install-composer)</span><br><span class="line"></span><br><span class="line">* mysql</span><br><span class="line"></span><br><span class="line">### 三、前端环境部署</span><br><span class="line"></span><br><span class="line">* nvm</span><br></pre></td></tr></table></figure></p>
+<p>wget -qO- <a href="https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh</a> | bash<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; Ps:   </span><br><span class="line">&gt; 1、[点击查看更多nvm安装信息](https://github.com/nvm-sh/nvm)   </span><br><span class="line">&gt; 2、nvm会一起安装node和npm</span><br><span class="line"></span><br><span class="line">* cnpm</span><br></pre></td></tr></table></figure></p>
+<p>npm install cnpm -g –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">### 四、线上项目git部署</span><br><span class="line"></span><br><span class="line">* git安装</span><br></pre></td></tr></table></figure></p>
+<p>yum install git (我是系统默认安装了)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 生成ssh秘钥</span><br></pre></td></tr></table></figure></p>
+<p>ssh-keygen -t rsa -C ”你的邮箱“  // 也可以不填邮箱<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 工程部署</span><br></pre></td></tr></table></figure></p>
+<p>git clone “项目地址”<br><code>`</code></p>
+<blockquote>
+<p>Ps:<br>1、域名不要直接指向git目录，有暴露git信息的风险<br>2、前端vue，后端laravel，项目打包更新都是通过shell脚本执行的</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/10/redis学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1430,135 +1603,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/Scp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jayding">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jayding's Home">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/16/Scp/" itemprop="url">利用scp传输文件</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T17:38:25+08:00">
-                2018-07-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1、从服务器下载文件"><a href="#1、从服务器下载文件" class="headerlink" title="1、从服务器下载文件"></a>1、从服务器下载文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp username@servername:/path/filename /tmp/local_destination</span><br><span class="line">scp codinglog@192.168.0.101:/home/kimi/test.txt</span><br></pre></td></tr></table></figure>
-<p>   把192.168.0.101上的/home/kimi/test.txt的文件下载到 /tmp/local_destination</p>
-<h3 id="2、上传本地文件到服务器"><a href="#2、上传本地文件到服务器" class="headerlink" title="2、上传本地文件到服务器"></a>2、上传本地文件到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp /path/local_filename username@servername:/path  </span><br><span class="line">scp /var/www/test.php  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
-<p>   把本机/var/www/目录下的test.php文件<br>   上传到192.168.0.101这台服务器上的/var/www/目录中</p>
-<h3 id="3、从服务器下载整个目录"><a href="#3、从服务器下载整个目录" class="headerlink" title="3、从服务器下载整个目录"></a>3、从服务器下载整个目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r username@servername:remote_dir/ /tmp/local_dir </span><br><span class="line">scp -r codinglog@192.168.0.101 /home/kimi/test  /tmp/local_dir</span><br></pre></td></tr></table></figure>
-<h3 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp -r /tmp/local_dir username@servername:remote_dir</span><br><span class="line">scp -r test  codinglog@192.168.0.101:/var/www/</span><br></pre></td></tr></table></figure>
-<p>把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
-<h3 id="附：需要使用端口号时，要紧跟scp"><a href="#附：需要使用端口号时，要紧跟scp" class="headerlink" title="附：需要使用端口号时，要紧跟scp"></a>附：需要使用端口号时，要紧跟scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -P 8888  /path/local_filename username@servername:/path</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1602,7 +1653,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1652,7 +1703,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
