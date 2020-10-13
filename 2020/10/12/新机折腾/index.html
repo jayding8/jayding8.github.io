@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jayding&#39;s Home">
 <meta property="og:description" content="Ucloud云主机贪便宜买一了台ucloud服务器，1核2G 2M带宽，系统盘40G 一、服务器配置调整 修改服务器名字  1hostnamectl set-hostname xxx  安装rz、sz  1yum install lrzsz.x86_64 (yum search后，复制包名直接install)  新增用户  12useradd jayding   新增用户名为jayding的用户p">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-10-13T00:41:17.737Z">
+<meta property="og:updated_time" content="2020-10-13T00:46:23.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux基本环境配置">
 <meta name="twitter:description" content="Ucloud云主机贪便宜买一了台ucloud服务器，1核2G 2M带宽，系统盘40G 一、服务器配置调整 修改服务器名字  1hostnamectl set-hostname xxx  安装rz、sz  1yum install lrzsz.x86_64 (yum search后，复制包名直接install)  新增用户  12useradd jayding   新增用户名为jayding的用户p">
@@ -354,13 +354,43 @@
 <ul>
 <li>php</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">yum install php</span><br><span class="line">yum search php*json</span><br><span class="line">yum install php-json.x86_64   (默认没有json扩展，composer无法安装)   </span><br><span class="line">```   </span><br><span class="line">   </span><br><span class="line">&gt; Ps:   </span><br><span class="line">&gt; 1、调整php-fpm配置，`/etc/php-fpm.d/www.conf`中`listen`由端口监听改为sock监听(需要和nginx中php配置保持一致，否则502)    </span><br><span class="line">&gt; 2、自主修改`/etc/php.ini`    </span><br><span class="line"></span><br><span class="line">* composer</span><br></pre></td></tr></table></figure>
-<p>php -r “copy(‘<a href="https://install.phpcomposer.com/installer&#39;" target="_blank" rel="noopener">https://install.phpcomposer.com/installer&#39;</a>, ‘composer-setup.php’);”   下载安装脚本 － composer-setup.php － 到当前目录。<br>php composer-setup.php   执行安装过程。<br>php -r “unlink(‘composer-setup.php’);”   删除安装脚本。<br>mv composer.phar /usr/local/bin/composer   全局安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; Ps: [点击查看更多composer安装信息](https://pkg.phpcomposer.com/#how-to-install-composer)   </span><br><span class="line"></span><br><span class="line">* mysql   </span><br><span class="line"></span><br><span class="line">### 三、前端环境部署</span><br><span class="line"></span><br><span class="line">* nvm</span><br></pre></td></tr></table></figure></p>
-<p>wget -qO- <a href="https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh</a> | bash<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; Ps:   </span><br><span class="line">&gt; 1、[点击查看更多nvm安装信息](https://github.com/nvm-sh/nvm)   </span><br><span class="line">&gt; 2、nvm会一起安装node和npm   </span><br><span class="line"></span><br><span class="line">* cnpm</span><br></pre></td></tr></table></figure></p>
-<p>npm install cnpm -g –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">### 四、线上项目git部署</span><br><span class="line"></span><br><span class="line">* git安装</span><br></pre></td></tr></table></figure></p>
-<p>yum install git (我是系统默认安装了)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 生成ssh秘钥</span><br></pre></td></tr></table></figure></p>
-<p>ssh-keygen -t rsa -C ”你的邮箱“  // 也可以不填邮箱<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 工程部署</span><br></pre></td></tr></table></figure></p>
-<p>git clone “项目地址”<br><code>`</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install php</span><br><span class="line">yum search php*json</span><br><span class="line">yum install php-json.x86_64   (默认没有json扩展，composer无法安装)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br>1、调整php-fpm配置，<code>/etc/php-fpm.d/www.conf</code>中<code>listen</code>由端口监听改为sock监听(需要和nginx中php配置保持一致，否则502)<br>2、自主修改<code>/etc/php.ini</code>    </p>
+</blockquote>
+<ul>
+<li>composer   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">php -r &quot;copy(&apos;https://install.phpcomposer.com/installer&apos;, &apos;composer-setup.php&apos;);&quot;   下载安装脚本 － composer-setup.php － 到当前目录。   </span><br><span class="line">php composer-setup.php   执行安装过程。   </span><br><span class="line">php -r &quot;unlink(&apos;composer-setup.php&apos;);&quot;   删除安装脚本。   </span><br><span class="line">mv composer.phar /usr/local/bin/composer   全局安装</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps: <a href="https://pkg.phpcomposer.com/#how-to-install-composer" target="_blank" rel="noopener">点击查看更多composer安装信息</a>   </p>
+</blockquote>
+<ul>
+<li>mysql   </li>
+</ul>
+<h3 id="三、前端环境部署"><a href="#三、前端环境部署" class="headerlink" title="三、前端环境部署"></a>三、前端环境部署</h3><ul>
+<li>nvm   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:<br>1、<a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">点击查看更多nvm安装信息</a><br>2、nvm会一起安装node和npm   </p>
+</blockquote>
+<ul>
+<li>cnpm   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install cnpm -g --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h3 id="四、线上项目git部署"><a href="#四、线上项目git部署" class="headerlink" title="四、线上项目git部署"></a>四、线上项目git部署</h3><ul>
+<li>git安装   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git (我是系统默认安装了)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>生成ssh秘钥   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C ”你的邮箱“  // 也可以不填邮箱</span><br></pre></td></tr></table></figure>
+<ul>
+<li>工程部署   </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &quot;项目地址&quot;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>Ps:<br>1、域名不要直接指向git目录，有暴露git信息的风险<br>2、前端vue，后端laravel，项目打包更新都是通过shell脚本执行的   </p>
 </blockquote>
@@ -525,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ucloud云主机"><span class="nav-number">1.</span> <span class="nav-text">Ucloud云主机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、服务器配置调整"><span class="nav-number">1.1.</span> <span class="nav-text">一、服务器配置调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、安装php环境"><span class="nav-number">1.2.</span> <span class="nav-text">二、安装php环境</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ucloud云主机"><span class="nav-number">1.</span> <span class="nav-text">Ucloud云主机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、服务器配置调整"><span class="nav-number">1.1.</span> <span class="nav-text">一、服务器配置调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、安装php环境"><span class="nav-number">1.2.</span> <span class="nav-text">二、安装php环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、前端环境部署"><span class="nav-number">1.3.</span> <span class="nav-text">三、前端环境部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、线上项目git部署"><span class="nav-number">1.4.</span> <span class="nav-text">四、线上项目git部署</span></a></li></ol></li></ol></div>
             
 
           </div>
